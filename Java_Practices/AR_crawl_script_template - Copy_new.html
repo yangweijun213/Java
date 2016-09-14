@@ -1,0 +1,2971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://52.77.215.115:8443/" />
+<title>Dashboard DBUS-02-01 Verify User can login to RP using defined password or password in LDAP</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Dashboard DBUS-02-01 Verify User can login to RP using defined password or password in LDAP</td></tr>
+</thead><tbody>
+<!--Author: Jeff Yang-->
+<!--###Global Setting for Script Execution###-->
+<!--############################################Case01:Dashboard DBUS-02-01 Verify User can login to RP using defined password or password in LDAP-->
+<!--#open Home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click icon of setting in right-top-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Administration-->
+<tr>
+	<td>click</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Users-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:btnUserManage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Add User in left pane-->
+<tr>
+	<td>click</td>
+	<td>id=addUser</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input a UNIQUE value in User name-->
+<tr>
+	<td>type</td>
+	<td>id=editUserForm:user</td>
+	<td>${uniqueID}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input UNIQUE value in Email-->
+<tr>
+	<td>type</td>
+	<td>id=editUserForm:userEmail</td>
+	<td>test_${uniqueID}@test.com</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='editUserForm:createPassword']/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input any value in New password-->
+<tr>
+	<td>type</td>
+	<td>id=editUserForm:userNewPassword</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input the same value in Confirm password-->
+<tr>
+	<td>type</td>
+	<td>id=editUserForm:userConfirmPassword</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#tick Administrator in Privilege Groups-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='editUserForm:privilegeGroupList']/tbody/tr/td/ul/li/table/tbody/tr/td/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#move Administrator into right-box-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Save-->
+<tr>
+	<td>click</td>
+	<td>id=editUserForm:confirmUserEdit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case02:Dashboard DBAE-01-01 Verify map entity and return with one regulator-->
+<!--#open Home page by clicking Dashboard-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click icon of setting in right-top-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Entity Setup-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:imGroupMenuNative</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon of + (Add new entity)-->
+<tr>
+	<td>click</td>
+	<td>//a[preceding-sibling::span[text()=&quot;Add new entity&quot;]]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input UNIQUE value in the Name-->
+<tr>
+	<td>type</td>
+	<td>id=addEntityDialogForm:EntityName:EntityName</td>
+	<td>${uniqueID}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input UNIQUE value in Code-->
+<tr>
+	<td>type</td>
+	<td>id=addEntityDialogForm:EntityCode:EntityCode</td>
+	<td>${uniqueID}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Add-->
+<tr>
+	<td>click</td>
+	<td>id=addEntityDialogForm:confirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//img[following-sibling::label[text()='${uniqueID}']]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the created entity, Entity Setup popup-->
+<tr>
+	<td>click</td>
+	<td>//img[following-sibling::label[text()='${uniqueID}']]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Assign Returns in Entity Setup-->
+<tr>
+	<td>click</td>
+	<td>link=Assign Returns</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#tick DSFR01v1-->
+<tr>
+	<td>click</td>
+	<td>//td[following-sibling::td[text()='DSFR01 v1']]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the link Assign privileges-->
+<tr>
+	<td>click</td>
+	<td>//td[preceding-sibling::td[text()=&quot;DSFR01 v1&quot;]][3]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon of + (Add User Group)-->
+<tr>
+	<td>click</td>
+	<td>//a[preceding-sibling::span[text()=&quot;Add User Group&quot;]]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#tick test_grp-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='addUserGroupDlgForm:userInfoMenu']/div[3]/table/tbody/tr/td/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Add-->
+<tr>
+	<td>click</td>
+	<td>id=addUserGroupDlgForm:addUserGroup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon of + (Add Priviledge Group)-->
+<tr>
+	<td>click</td>
+	<td>//a[preceding-sibling::span[text()=&quot;Add Privilege Group&quot;]]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#tick Return Viewer, Return Submitter, Return Approver-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='addPrivilegesToGroupDlgForm:privilegeGroupsMenu']/div[3]/table/tbody/tr/td/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Add-->
+<tr>
+	<td>click</td>
+	<td>id=addPrivilegesToGroupDlgForm:addPrivilegesToGroup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Save-->
+<tr>
+	<td>click</td>
+	<td>id=configureUserPrivilegesforReturnsDlgForm:configureUserPrivilegesforReturns</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Assign-->
+<tr>
+	<td>click</td>
+	<td>//button[child::span[text()=&quot;Assign&quot;]]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the created Entity-->
+<tr>
+	<td>click</td>
+	<td>//img[following-sibling::label[text()='${uniqueID}']]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Delete-->
+<tr>
+	<td>click</td>
+	<td>id=editGroupForm:deleteBtn1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#confirm delete-->
+<tr>
+	<td>click</td>
+	<td>id=deleteconfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#goto home page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case04:Dashboard DBAC-01-04 Verify Calendar can be added, edited, deleted correctly-->
+<!--#goto home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click icon of setting in right-top-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Administration-->
+<tr>
+	<td>click</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the Calendar-->
+<tr>
+	<td>click</td>
+	<td>link=Calendar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the Calendar-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@id='formHeader:calendar']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Add-->
+<tr>
+	<td>click</td>
+	<td>id=calendarMainForm:calendarAdd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input a UNIQUE value in the Name-->
+<tr>
+	<td>type</td>
+	<td>id=editCalendarForm:calendarName</td>
+	<td>Calendar_${uniqueID}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Save-->
+<tr>
+	<td>click</td>
+	<td>id=saveCalendarForm:saveCalendarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#goto home page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case05:Dashboard DBAC-01-05 Verify Schedule can be added, edited, deleted correctly-->
+<!--##goto home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click icon of setting in right-top-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Administration-->
+<tr>
+	<td>click</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Calendar-->
+<tr>
+	<td>click</td>
+	<td>link=Calendar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Schedule-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@id='formHeader:schedule']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Add-->
+<tr>
+	<td>click</td>
+	<td>id=scheduleMainForm:scheduleAdd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input a UNIQUE value in the Name-->
+<tr>
+	<td>type</td>
+	<td>id=editScheduleForm:scheduleName</td>
+	<td>PST_Schedule</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input a UNIQUE value in the Description-->
+<tr>
+	<td>type</td>
+	<td>id=editScheduleForm:scheduleDescription</td>
+	<td>PST_Schedule_haha</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Add (Last work day of month)-->
+<tr>
+	<td>click</td>
+	<td>//td[preceding-sibling::td[child::table[child::tbody[child::tr[child::td[child::label[text()=&quot;Last work day of month&quot;]]]]]]]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Save-->
+<tr>
+	<td>click</td>
+	<td>id=saveScheduleForm:saveScheduleBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//tr[child::td[child::span[text()=&quot;PST_Schedule_haha&quot;]]]/td[4]/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the created Calendar name-->
+<tr>
+	<td>click</td>
+	<td>//tr[child::td[child::span[text()=&quot;PST_Schedule_haha&quot;]]]/td[4]/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Delete-->
+<tr>
+	<td>click</td>
+	<td>id=deleteconfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case11:OFSAA OFSA-01-07 Verify summing cells can be drilldown properly-->
+<!--#goto home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click menu Retrieve Return-->
+<tr>
+	<td>click</td>
+	<td>id=FormInstImpExpMenu:retrieve</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#set Reference Date-->
+<tr>
+	<td>click</td>
+	<td>id=retrieveForm:referenceDate_input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#select 2015-->
+<tr>
+	<td>select</td>
+	<td>//*[@id='ui-datepicker-div']/div/div/select[2]</td>
+	<td>label=2015</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#select Dec-->
+<tr>
+	<td>select</td>
+	<td>//*[@id='ui-datepicker-div']/div/div/select[1]</td>
+	<td>label=Dec</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#select 31-->
+<tr>
+	<td>click</td>
+	<td>link=31</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#select DSFR01 v1-->
+<tr>
+	<td>select</td>
+	<td>id=retrieveForm:selectForm</td>
+	<td>label=DSFR03 v1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button OK-->
+<tr>
+	<td>click</td>
+	<td>id=retrieveForm:doRetrieve</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=formInstanceListForm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click ok-->
+<tr>
+	<td>click</td>
+	<td>id=jobResultForm:ok</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the created retrieve DSFR03-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:selectButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon of x to close it-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:closeFormInstanceBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon of garbage to delete it-->
+<tr>
+	<td>click</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:delIcon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button OK-->
+<tr>
+	<td>click</td>
+	<td>id=deleteReturnMessageForm:deleteReturnConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input any value in the Comment-->
+<tr>
+	<td>type</td>
+	<td>id=deleteReturnCommentForm:deleteReturnCommentTxt</td>
+	<td>delete</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button OK-->
+<tr>
+	<td>click</td>
+	<td>id=deleteReturnCommentForm:deleteReturn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#goto home page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case13:OFSAA OFSE-01-08 Verify the dormant edition can be deleted in Edition Manager window with warning message -return viewer page-->
+<!--#goto home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click menu Retrieve Return-->
+<tr>
+	<td>click</td>
+	<td>id=FormInstImpExpMenu:retrieve</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#set Reference Date 2015 Dec 31-->
+<tr>
+	<td>click</td>
+	<td>id=retrieveForm:referenceDate_input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//*[@id='ui-datepicker-div']/div/div/select[2]</td>
+	<td>label=2015</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//*[@id='ui-datepicker-div']/div/div/select[1]</td>
+	<td>label=Dec</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=31</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#select DSFR03 v1 in the Form-->
+<tr>
+	<td>select</td>
+	<td>id=retrieveForm:selectForm</td>
+	<td>label=DSFR03 v1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button OK-->
+<tr>
+	<td>click</td>
+	<td>id=retrieveForm:doRetrieve</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button OK-->
+<tr>
+	<td>click</td>
+	<td>//*[@id='jobResultDialog']/div[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click OK-->
+<tr>
+	<td>click</td>
+	<td>id=jobResultForm:ok</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Job Manager-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:jobManager</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#goto menu Create New ->Create new return-->
+<tr>
+	<td>click</td>
+	<td>id=FormInstImpExpMenu:createNew</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@id='FormInstImpExpMenu:createFormInstEmpty']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#set Reference Date 2015 Dec 31-->
+<tr>
+	<td>click</td>
+	<td>id=createForm:processDate_input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//*[@id='ui-datepicker-div']/div/div/select[2]</td>
+	<td>label=2015</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//*[@id='ui-datepicker-div']/div/div/select[1]</td>
+	<td>label=Dec</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=31</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#select Form DSFR03 v1-->
+<tr>
+	<td>select</td>
+	<td>id=createForm:selectForm</td>
+	<td>label=DSFR03 v1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Create-->
+<tr>
+	<td>click</td>
+	<td>id=createForm:createformInstanceBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click confirm-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=createconfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon of x to close-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//*[@id='formHeader:closeFormInstanceBtn']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Manage Editions for the created Entity in home page-->
+<tr>
+	<td>click</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:edition</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#delet one entity-->
+<tr>
+	<td>click</td>
+	<td>id=formInstanceEditionManagerForm:formInstanceEditionManagerTable:1:delIcon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#confirm delete-->
+<tr>
+	<td>click</td>
+	<td>id=deleteEditionMessageForm:deleteEditionConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input any value in the Comment-->
+<tr>
+	<td>type</td>
+	<td>id=deleteEditionCommentForm:deleteEditionCommentTxt</td>
+	<td>delete</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Delete-->
+<tr>
+	<td>click</td>
+	<td>id=deleteEditionCommentForm:deleteEdition</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='formInstanceEditionManagerDialog']/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#goto home page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click delete-->
+<tr>
+	<td>click</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:delIcon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#delete icon of garbage to delete the created return-->
+<tr>
+	<td>click</td>
+	<td>id=deleteReturnMessageForm:deleteReturnConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input any value in the Comment-->
+<tr>
+	<td>type</td>
+	<td>id=deleteReturnCommentForm:deleteReturnCommentTxt</td>
+	<td>delete</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Delete-->
+<tr>
+	<td>click</td>
+	<td>id=deleteReturnCommentForm:deleteReturn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#goto home page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case16:OFSAA OFDS-01-11 Verify retrieve job can be created for new return - 1 source view-->
+<!--#goto Home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#goto menu Retrieve Return-->
+<tr>
+	<td>click</td>
+	<td>id=FormInstImpExpMenu:retrieve</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#set reference date 2015 Dec 31-->
+<tr>
+	<td>click</td>
+	<td>//*[@id='retrieveForm:referenceDate_input']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//*[@id='ui-datepicker-div']/div/div/select[2]</td>
+	<td>label=2015</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//*[@id='ui-datepicker-div']/div/div/select[1]</td>
+	<td>label=Dec</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=31</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#select DSFR02 v1 in the Form-->
+<tr>
+	<td>select</td>
+	<td>id=retrieveForm:selectForm</td>
+	<td>label=DSFR02 v1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button OK-->
+<tr>
+	<td>click</td>
+	<td>id=retrieveForm:doRetrieve</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the OK-->
+<tr>
+	<td>click</td>
+	<td>//*[@id='jobResultDialog']/div[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click OK-->
+<tr>
+	<td>click</td>
+	<td>id=jobResultForm:ok</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--# click menu Dashboard to goto Home page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon of R in JOB STATUS-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:retrieveJobSuccess</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the link Update for created Return-->
+<tr>
+	<td>click</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:updateBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click x to close dialog window-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='returnSourcesDialog']/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the link NO ATTESTATION NEEDED-->
+<tr>
+	<td>click</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:selectApproval</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#close icon x to close dialog windows-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='workflowLogDialog']/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case36: Retrieve Return->Show Import Log, View adjustment log, view workflow log-->
+<!--#goto Home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click Return DSFR02-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:selectButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Show Import Log-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:showLog</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon x to close dialog window-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='dwImportDialog']/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the Adjustments - >View adjustment log-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:adjust_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@id='formHeader:checkAdjustLog']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Worklflow->View workflow log-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:workflow_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@id='formHeader:viewLog']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#close icon x to close diaglog window-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='workflowLogDialog']/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:closeFormInstanceBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case37: Retrieve Return->Add instances-->
+<!--#goto Home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click return DSFR02-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:selectButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon + to create a new instance-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:showCreateDialogButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input UNIQUE value in Add new Instance-->
+<tr>
+	<td>type</td>
+	<td>id=formAddInstanceNoSet:txtInstanceId</td>
+	<td>${uniqueID}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Add-->
+<tr>
+	<td>click</td>
+	<td>id=formAddInstanceNoSet:accept2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#close icon x to close window-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:closeFormInstanceBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case14:OFSAA OFDS-01-88 Verify User can export data schedule return well when source data is unchanged-->
+<!--#click return DSFR02-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:selectButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#lock it by click icon locker-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:lockBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Validate Now-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:validateNowBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Export To Regulator Format ->Export To DSXML-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:exportToFile4Fed_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='formHeader:exportToFile4Fed_menu']/ul/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#export Export in Export to DataSchedule-->
+<tr>
+	<td>click</td>
+	<td>id=transmitSubmitForm4Fed:exportBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click OK-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=jobResultForm:ok</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click OK-->
+<tr>
+	<td>click</td>
+	<td>id=jobResultForm:ok</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon x to close window-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:closeFormInstanceBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case20:Dashboard DBCF-01-15 Verify the copy return function of new return work properly-->
+<!--#goto Home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click menu Create New->Create New-->
+<tr>
+	<td>click</td>
+	<td>id=FormInstImpExpMenu:createNew</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@id='FormInstImpExpMenu:createFormInstEmpty']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#set Reference Date 2016 July 31-->
+<tr>
+	<td>click</td>
+	<td>id=createForm:processDate_input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//*[@id='ui-datepicker-div']/div/div/select[2]</td>
+	<td>label=2016</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//*[@id='ui-datepicker-div']/div/div/select[1]</td>
+	<td>label=Jul</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=31</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#tick Copy data form-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='createForm:cloneCheck']/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Create-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=createForm:createformInstanceBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Adjustments->View adjustment log-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:adjust_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@id='formHeader:checkAdjustLog']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon of x to close window-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:closeFormInstanceBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#delete icon of garbage to delete DSFR02-->
+<tr>
+	<td>click</td>
+	<td>id=formInstanceListForm:formInstanceListTable:1:delIcon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click OK-->
+<tr>
+	<td>click</td>
+	<td>id=deleteReturnMessageForm:deleteReturnConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input any value in the Comment-->
+<tr>
+	<td>type</td>
+	<td>id=deleteReturnCommentForm:deleteReturnCommentTxt</td>
+	<td>delete</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the OK-->
+<tr>
+	<td>click</td>
+	<td>id=deleteReturnCommentForm:deleteReturn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case22:Dashboard DBTX-01-07 Verify extend grid FORM can be transmitted to Vanilla successfully - Dashboard entry-->
+<!--#open home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click Export To Regulator Format ->Export To Vanilla-->
+<tr>
+	<td>click</td>
+	<td>id=FormInstImpExpMenu:exportToFile_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='FormInstImpExpMenu:exportToFile_menu']/ul/li/a/span</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case23:Dashboard DBTX-01-06 Verify normal FORM can be transmitted to Vanilla successfully  - Form page entry-->
+<!--#goto Home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click DSFR01-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:selectButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Export To Regulator Format ->Export To Vanilla-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:exportToFile4Fed_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id='formHeader:exportToFile4Fed_menu']/ul/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Export-->
+<tr>
+	<td>click</td>
+	<td>id=transmitSubmitForm4Fed:nextBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon x to close window-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:closeFormInstanceBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case28:OFSAA OFSE-01-12 Verify DORMANT edition can be set to ACTIVE -return viewer page-->
+<!--#click DSFR01-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:selectButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon x to close window-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:closeFormInstanceBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Create New ->Create New-->
+<tr>
+	<td>click</td>
+	<td>id=FormInstImpExpMenu:createNew</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@id='FormInstImpExpMenu:createFormInstEmpty']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#set Reference Date 2015 Dec 31-->
+<tr>
+	<td>click</td>
+	<td>id=createForm:processDate_input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//*[@id='ui-datepicker-div']/div/div/select[2]</td>
+	<td>label=2015</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//*[@id='ui-datepicker-div']/div/div/select[1]</td>
+	<td>label=Dec</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=31</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Create-->
+<tr>
+	<td>click</td>
+	<td>id=createForm:createformInstanceBtn</td>
+	<td></td>
+</tr>
+<!--click the button ok-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=createconfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon x to close window-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//*[@id='formHeader:closeFormInstanceBtn']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case29:OFSAA OFSE-01-11 Verify ACTIVE edition can be set to DORMANT -dashboard-->
+<!--#goto Home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click Manage Editions for the first return DSFR01-->
+<tr>
+	<td>click</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:edition</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id='formInstanceEditionManagerForm:formInstanceEditionManagerTable_data']/tr[2]/td[7]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#close window-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='formInstanceEditionManagerDialog']/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#-->
+<tr>
+	<td>click</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:edition</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Manage Editions-->
+<tr>
+	<td>click</td>
+	<td>id=formInstanceEditionManagerForm:formInstanceEditionManagerTable:0:delIcon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#delete-->
+<tr>
+	<td>click</td>
+	<td>//*[@id='deleteEditionMessageDlg']/div[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click ok-->
+<tr>
+	<td>click</td>
+	<td>id=deleteEditionMessageForm:deleteEditionConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input any value in the Comment-->
+<tr>
+	<td>type</td>
+	<td>id=deleteEditionCommentForm:deleteEditionCommentTxt</td>
+	<td>delete</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click OK-->
+<tr>
+	<td>click</td>
+	<td>id=deleteEditionCommentForm:deleteEdition</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='formInstanceEditionManagerDialog']/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#-->
+<tr>
+	<td>click</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:delIcon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click OK-->
+<tr>
+	<td>click</td>
+	<td>id=deleteReturnMessageForm:deleteReturnConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input any value in the Comment-->
+<tr>
+	<td>type</td>
+	<td>id=deleteReturnCommentForm:deleteReturnCommentTxt</td>
+	<td>delete</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click ok-->
+<tr>
+	<td>click</td>
+	<td>id=deleteReturnCommentForm:deleteReturn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case30: Show Deleted Returns-->
+<!--#goto Home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click menu Show Deleted Returns-->
+<tr>
+	<td>click</td>
+	<td>id=FormInstImpExpMenu:showDeletedReturns</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#tick the first Retuns-->
+<tr>
+	<td>click</td>
+	<td>//tbody[@id='deletedReturnsListForm:deletedReturnListTable_data']/tr/td/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Restore Return-->
+<tr>
+	<td>click</td>
+	<td>id=deletedReturnsListForm:restoreDeletedReturns</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input any value in the Comment-->
+<tr>
+	<td>type</td>
+	<td>id=restoreReturnCommentForm:restoreReturnCommentTxt</td>
+	<td>Restore</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button OK-->
+<tr>
+	<td>click</td>
+	<td>id=restoreReturnCommentForm:restoreReturn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Cancel-->
+<tr>
+	<td>click</td>
+	<td>id=deletedReturnsListForm:deletedReturnsListCancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon of garbage to delete it-->
+<tr>
+	<td>click</td>
+	<td>id=formInstanceListForm:formInstanceListTable:0:delIcon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button OK-->
+<tr>
+	<td>click</td>
+	<td>id=deleteReturnMessageForm:deleteReturnConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#input any value in the Comment-->
+<tr>
+	<td>type</td>
+	<td>id=deleteReturnCommentForm:deleteReturnCommentTxt</td>
+	<td>delete</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button OK-->
+<tr>
+	<td>click</td>
+	<td>id=deleteReturnCommentForm:deleteReturn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case31: Delete Return Log-->
+<!--#goto Home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click menu Delete Return Log-->
+<tr>
+	<td>click</td>
+	<td>id=FormInstImpExpMenu:deleteReturnLog</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#close the button Close-->
+<tr>
+	<td>click</td>
+	<td>id=deleteReturnLogListForm:deleteReturnLogListCancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case32: hi test -> Perference,change password-->
+<!--#goto home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click menu hi test -> Preferences-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:lblUser_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=formHeader:btnPreferences</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click the button Cancel-->
+<tr>
+	<td>click</td>
+	<td>id=preferencesForm:cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click hi test ->change password-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:lblUser_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@id='formHeader:btnChangePassword']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click button Cancel-->
+<tr>
+	<td>click</td>
+	<td>id=changePasswordForm:cancelPasswordChange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case33: Setting-> Entity, Form Variables-->
+<!--#goto Home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--#click icon of setting in right-top-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click Entity Setup-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:imGroupMenuNative</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click icon of setting in right-top -> Form Variables-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:formVariablesMenu</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case34: Setting->Administration->all sub menu (except to Calendar)-->
+<!--#goto Home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--##click icon of setting in right-top ->Administration ->Users-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:btnUserManage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--##click icon of setting in right-top ->Administration ->Users->Privilege Groups-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:btnPrivilegeManage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--##click icon of setting in right-top ->Administration ->User Groups-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:btnUserGroupManage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--##click icon of setting in right-top ->Administration ->Form Schedule binding-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@id='formHeader:formSchedule']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--##click icon of setting in right-top ->Administration ->Calculation Engines-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:configCalculationEngines</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--##click icon of setting in right-top ->Administration ->Config Package Binding-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@id='formHeader:configPackageBinding']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--##click icon of setting in right-top ->Administration ->Data Warehouse Integration-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@id='formHeader:dataIntegation']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--##click icon of setting in right-top ->Administration ->Setup Network File Location-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@id='formHeader:physicalLocation']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click menu Dashboard-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=formHeader:errorBarBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--############################################Case35: Help-->
+<!--#goto Home page-->
+<tr>
+	<td>open</td>
+	<td>https://52.77.215.115:8443/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--# click menu ?  (Help) ->Legal and Licenses-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giHelp</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Legal and Licenses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--# click menu ?  (Help) ->About-->
+<tr>
+	<td>click</td>
+	<td>id=formHeader:giHelp</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=About</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--#click OK-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//*[@id='aboutForm']/div/div[4]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
