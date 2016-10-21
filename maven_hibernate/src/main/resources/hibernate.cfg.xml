@@ -9,6 +9,7 @@
   <property name="hibernate.connection.username">SINGLEUSERPERFORMANCETEST</property>
   <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
   <property name="show_sql">true</property>
-  <mapping resource="com/jun/demo/Dbuser.hbm.xml" />
+  <mapping resource="com/jun/OneToMany/Student.hbm.xml" />
+  <mapping resource="com/jun/OneToMany/Grade.hbm.xml" />
  </session-factory>
 </hibernate-configuration>
