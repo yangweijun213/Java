@@ -1,6 +1,10 @@
-package com.jun.cache.JAVA缓存的实现;
+package com.jun.cache;
 
-//测试类，   
+/**  
+ *  http://blog.csdn.net/suifeng0117/article/details/5413039
+ * @author Deepblue  2008-11-11  
+ * @version 1.0  
+ */     
 public class TestCache {
 	
 	public static void main(String[] args) {   
