@@ -1,4 +1,4 @@
-package com.jun.college;
+package com.jun.object;
 
 public class TestObject {
 

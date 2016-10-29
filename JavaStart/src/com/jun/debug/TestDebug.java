@@ -1,4 +1,4 @@
-package com.jun.college;
+package com.jun.debug;
 
 public class TestDebug {
 	
