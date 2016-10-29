@@ -1,4 +1,4 @@
-package com.jun.cache;
+package com.practice.cache;
 
 /**  
  *  http://blog.csdn.net/suifeng0117/article/details/5413039
