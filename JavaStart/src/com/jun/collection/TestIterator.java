@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class TestIterator {
@@ -56,6 +57,13 @@ public class TestIterator {
 			System.out.println(str);
 		}
 		
+		//如果Map很多，数据很多，遍历很多，可以使用方法
+		Set<Map.Entry<Integer,String>> ss = m.entrySet();
+		for (Iterator<Map.Entry<Integer,String>> iterator = ss.iterator(); iterator.hasNext();) {
+			Entry<Integer, String> e = (Entry<Integer, String>) iterator.next();
+			System.out.println(e.getKey()+"----"+e.getValue());
+			
+		}
 		
 	}
 	public static void main(String[] args) {
