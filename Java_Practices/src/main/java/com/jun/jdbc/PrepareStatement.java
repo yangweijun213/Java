@@ -1,4 +1,4 @@
-package com.jun.oracle.jdbc;
+package com.jun.jdbc;
 
 import java.io.InputStream;
 import java.sql.Connection;
