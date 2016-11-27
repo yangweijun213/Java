@@ -1,4 +1,4 @@
-package com.jun.collection;
+package com.jun.container;
 
 import java.io.FileReader;
 import java.io.IOException;

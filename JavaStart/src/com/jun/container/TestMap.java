@@ -1,4 +1,4 @@
-package com.jun.collection;
+package com.jun.container;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -65,8 +65,6 @@ public class TestMap {
 		//不用转型，保证出来是泛型
 		Dog d = map.get("abc");
 		
-		
-		
 	}
 	
 	public static void main (String[] args){
@@ -87,5 +85,4 @@ class Dog {
 		this.color = color;
 	}
 
-	
 }
