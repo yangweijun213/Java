@@ -28,5 +28,13 @@
 		<th>编辑  | 删除</th>
 	</tr>
 	</c:forEach>
+	<tr>
+		<td colspan ="6">
+			<a href = "NewsServlet?pageNumber=1">首页</a>
+			<a href = "NewsServlet?pageNumber=${pageNumber-1}">上一页</a>
+			<a href = "NewsServlet?pageNumber=${pageNumber+1}">下一页</a>
+			<a href = "NewsServlet?pageNumber=${pageCount}">尾页</a>
+	</tr>
+	</table>
 </body>
 </html>

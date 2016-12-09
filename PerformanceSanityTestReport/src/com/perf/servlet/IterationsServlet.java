@@ -1,4 +1,4 @@
-package com.newsmanager.servlet;
+package com.perf.servlet;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.newsmanager.dao.NewsDao;
-import com.newsmanager.entity.News;
+import com.perf.dao.IterationsDao;
+import com.perf.entity.Iterations;
 
 /**
  *  数据调用和处理 
  */
-public class NewsServlet extends HttpServlet {
+public class IterationsServlet extends HttpServlet {
 	
-    private NewsDao newsDao;
+    private IterationsDao iterationsDao;
 	
     //重写方法init()
 	@Override
 	public void init() throws ServletException {
 		//newsDao对象初始化
-		newsDao = new NewsDao ();
+		iterationsDao = new IterationsDao ();
 	}
 
 
@@ -43,7 +43,7 @@ public class NewsServlet extends HttpServlet {
 		if (pageNumber<=1){
 			pageNumber =1;
 		}
-		int count = newsDao.getCount();
+		int count = iterationsDao.getCount();
 		Integer pageSize = 10;
 		//总条数除以每页条数,如果0,取商,否则商+1
 		int pageCount = count%pageSize==0?count/pageSize:count/pageSize+1;
@@ -52,13 +52,13 @@ public class NewsServlet extends HttpServlet {
 		}
 		
 		//调用 查询新闻集合的方法
-		List<News> newsList = newsDao.getNewsList(pageNumber, pageSize);
+		List<Iterations> iterationsList = iterationsDao.getIterationsList(pageNumber, pageSize);
 		//添加到request作用域 中，方便页面的调用
-		request.setAttribute("newsList", newsList);
+		request.setAttribute("iterationsList", iterationsList);
 		request.setAttribute("pageNumber", pageNumber);
 		request.setAttribute("pageCount", pageCount);
 		//转发到newsList.jsp页面
-		request.getRequestDispatcher("newsList.jsp").forward(request,response);
+		request.getRequestDispatcher("iterationsList.jsp").forward(request,response);
 	}
 
 }
