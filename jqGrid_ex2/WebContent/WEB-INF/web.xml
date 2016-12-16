@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <display-name>jqGrid_ex2</display-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>jqGrid</display-name>
+  <servlet>
+    <servlet-name>demoServlet</servlet-name>
+    <servlet-class>com.xeonmic.action.demoServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>demochangeServlet</servlet-name>
+    <servlet-class>com.xeonmic.action.demochangeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>goodlistServlet</servlet-name>
+    <servlet-class>com.xeonmic.action.goodlistServlet</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>demoServlet</servlet-name>
+    <url-pattern>/demoServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>demochangeServlet</servlet-name>
+    <url-pattern>/demochangeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>goodlistServlet</servlet-name>
+    <url-pattern>/goodlistServlet</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>

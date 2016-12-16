@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.jun.OneToMany.Student" table="STUDENT" schema="SingleUserPerformanceTest">
+        <id name="sid" type="java.lang.Integer">
+            <column name="SID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="sname" type="java.lang.String">
+            <column name="SNAME" length="20" />
+        </property>
+        <property name="sex" type="java.lang.String">
+            <column name="SEX" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

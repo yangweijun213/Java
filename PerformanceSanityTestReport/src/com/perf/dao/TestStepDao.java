@@ -18,8 +18,8 @@ import com.perf.entity.TestStep;
 
 public class TestStepDao {	
 	
-	final String sql = "select * from (select step_name, response_time, FKN_TESTRUN from FCT_RESULT) pivot (avg(response_time) avg_responseTime for (FKN_TESTRUN) in ('1','2','3','4','5','6','7','8' ))";
-		
+	
+	  final String sql = "select aa.start_date, aa.transaction_name, avg(aa.time) ART from (select * from COLSANITYTEST where started is NULL) aa group by aa.transaction_name, aa.start_date order by START_date";
 	/**
 	 * 方法描述  数据库连接，查询所有新闻集合
 	 * @return 新闻集合
@@ -51,8 +51,8 @@ public class TestStepDao {
 			resultSet = statement.executeQuery(sql);
 			while (resultSet.next()) {
 
-				String stepName = resultSet.getString("STEP_NAME");
-				String startTime = resultSet.getString("START_TIME");
+				String stepName = resultSet.getString("TRANSACTION_NAME");
+				String startTime = resultSet.getString("START_DATE");
 				String averageTime = resultSet.getString ("ART");
 			
 				//将返回结果封装到对象 NewsDao，并添加到 列表newsList

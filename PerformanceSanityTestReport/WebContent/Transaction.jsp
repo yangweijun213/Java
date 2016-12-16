@@ -94,7 +94,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					
 				});
 				//浏览导航栏添加功能部分代码
-				$("#grid-table").jqGrid('navGrid','#grid-pager',{add:false, edit:false, del:false, search:true});
+				$(grid_selector).navGrid(pager_selector, {
+						search: true, // 检索
+						add: true, //添加  （只有editable为true时才能显示属性）
+						edit: true, //修改（只有editable为true时才能显示属性）
+						del: true, //删除
+						refresh: true //刷新
+					}, {}, // edit options
+					{}, // add options
+					{}, // delete options
+					{
+						multipleSearch: true
+					} // search options - define multiple search
+				);
 			});
 		</script>
 	</body>

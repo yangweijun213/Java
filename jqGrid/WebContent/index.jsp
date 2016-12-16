@@ -25,7 +25,7 @@
 <script src="js/jquery.jqGrid.min.js" type="text/javascript"
 	charset="utf-8"></script>
 
-<!-- Pivot Grid: 分组行 -->
+<!-- Pivot Grid: 按日期分组显示  -->
 <script type="text/javascript">
 	$(function() {
 		pageInit();
@@ -35,16 +35,16 @@
 		// pivot options 
 		{
 			xDimension : [ {
-				dataName : 'CategoryName',
+				dataName : 'transactionName',
 				width : 90
 			}, {
-				dataName : 'ProductName'
+				dataName : 'averageTime'
 			} ],
 			yDimension : [ {
-				dataName : 'Country'
+				dataName : 'startTime'
 			} ],
 			aggregates : [ {
-				member : 'Price',
+				member : 'averageTime',
 				aggregator : 'sum',
 				width : 80,
 				label : 'Sum',
@@ -60,6 +60,7 @@
 			pager : "#pager2",
 			caption : "Rows grouping"
 		});
+		jQuery("#list2").jqGrid('navGrid','#pager2',{edit:false,add:false,del:false,searchtext:'查找',refreshtext:'刷新表格'});
 	}
 </script>
 

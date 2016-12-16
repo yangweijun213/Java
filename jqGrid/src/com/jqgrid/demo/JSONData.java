@@ -30,8 +30,8 @@ public class JSONData extends HttpServlet {
 		//Pivot Grid: Column groups - PivotGrid_TotalsByColumnsAndRows
 		String pivotJsonData3 = "{ \"rows\":[ { \"CategoryName\":\"Beverages\","+" \"ProductName\":\"Steeleye Stout\","+ "\"Country\":\"UK\","+" \"Price\":\"1008.0000\","+" \"Quantity\":\"65\" },"+"{ \"CategoryName\":\"Beverages\","+" \"ProductName\":\"Laughing Lumberjack Lager\","+" \"Country\":\"USA\","+" \"Price\":\"140.0000\","+" \"Quantity\":\"10\" }"+"]}"; 
 		
-		resp.getWriter().write(pivotJsonData3);
-		 System.out.println(pivotJsonData3);
+		resp.getWriter().write(pivotJsonData2);
+		 System.out.println(pivotJsonData2);
 	
 	}
 	 /** 
