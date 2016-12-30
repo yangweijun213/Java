@@ -33,3 +33,5 @@ select * from FCT_RESULT where FKN_TESTRUN in (select regexp_substr('1,2,3,4','[
  where started is NULL) aa
  group by aa.transaction_name, aa.start_date
  order by START_date
+ 
+

@@ -9,13 +9,13 @@ CREATE TABLE NEWS
 );
 ALTER TABLE NEWS ADD CONSTRAINT NEWS_PK PRIMARY KEY ( NEWSID );
 
+--id自动增长
 CREATE SEQUENCE sequence_news
     increment by 1    -- 每次递增1
     start with 1       -- 从1开始
     nomaxvalue      -- 没有最大值
     minvalue 1       -- 最小值=1
     NOCYCLE;      -- 不循环
-
 
 CREATE OR REPLACE TRIGGER trigger_news
     BEFORE INSERT ON NEWS

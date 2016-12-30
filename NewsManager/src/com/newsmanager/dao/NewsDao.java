@@ -30,7 +30,7 @@ public class NewsDao {
 			//1.加载驱动
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			//2。驱动管理器获取数据库连接
-			connection = DriverManager.getConnection("jdbc:oracle:thin:@172.20.20.35:1521:ora11g","blog","creditderivative");
+			connection = DriverManager.getConnection("jdbc:oracle:thin:@172.20.20.35:1521:ora11g","NEWSMANAGER","creditderivative");
 			//3。获取statement, 执行sql
 			statement = connection.createStatement();
 			//4.执行sql返回结果集并解析
@@ -107,7 +107,7 @@ public class NewsDao {
 				//1.加载驱动
 				Class.forName("oracle.jdbc.driver.OracleDriver");
 				//2。驱动管理器获取数据库连接
-				connection = DriverManager.getConnection("jdbc:oracle:thin:@172.20.20.35:1521:ora11g","blog","creditderivative");
+				connection = DriverManager.getConnection("jdbc:oracle:thin:@172.20.20.35:1521:ora11g","NEWSMANAGER","creditderivative");
 				//3。获取statement, 执行sql
 				statement = connection.createStatement();
 				//4.执行sql返回结果集并解析, 返回条数(使用count(*)聚合函数)

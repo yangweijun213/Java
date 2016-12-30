@@ -3,7 +3,7 @@
 -- type: Oracle Database 11g
 
 --创建一个用户Colline_Perf_SingleUserTest，密码为creditderivative
-CREATE USER blog IDENTIFIED BY creditderivative
+CREATE USER NewsManager IDENTIFIED BY creditderivative
 --设置表空间：让用户使用默认的表空间USERS
 DEFAULT TABLESPACE USERS 
 --设置表空间：让用户使用临时表空间TEMP
@@ -13,15 +13,15 @@ PROFILE DEFAULT
 --解锁: oracle的默认设定是登陆时密码错几次之后,系统自动锁定该用户,此时可以用这个命令对该用户解锁
 ACCOUNT UNLOCK;
 --分配开发人员权利
-GRANT RESOURCE TO blog;
+GRANT RESOURCE TO NewsManager;
 --分配最终用户的典型权利，最基本的
-GRANT CONNECT TO blog;
+GRANT CONNECT TO NewsManager;
 --分配创建视图的权限
-GRANT CREATE VIEW TO blog;
+GRANT CREATE VIEW TO NewsManager;
 --将该user已被授权的角色都设置为默认角色
-ALTER USER blog DEFAULT ROLE ALL;
+ALTER USER NewsManager DEFAULT ROLE ALL;
 --该user可以在这个表空间内随意建表
-GRANT UNLIMITED TABLESPACE TO blog;
+GRANT UNLIMITED TABLESPACE TO NewsManager;
 --分配创建物化视图的权限
-GRANT CREATE MATERIALIZED VIEW TO blog;
+GRANT CREATE MATERIALIZED VIEW TO NewsManager;
  
