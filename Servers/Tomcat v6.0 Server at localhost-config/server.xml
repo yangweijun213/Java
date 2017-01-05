@@ -131,7 +131,7 @@
                prefix="localhost_access_log." suffix=".txt" pattern="common" resolveHosts="false"/>
         -->
 
-      <Context docBase="PerformanceSanityTestReport" path="/PerformanceSanityTestReport" reloadable="true" source="org.eclipse.jst.jee.server:PerformanceSanityTestReport"/><Context docBase="jqGrid" path="/jqGrid" reloadable="true" source="org.eclipse.jst.jee.server:jqGrid"/></Host>
+      <Context docBase="NewsManager" path="/NewsManager" reloadable="true" source="org.eclipse.jst.jee.server:NewsManager"/></Host>
     </Engine>
   </Service>
 </Server>
