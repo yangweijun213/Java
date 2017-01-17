@@ -37,7 +37,7 @@ public class JMSPoducer {
 		try {
 			connection = connectionFactory.createConnection(); //通过连接工厂获取连接
 			connection.start(); //启动连接
-			session = connection.createSession(Boolean.TRUE, Session.AUTO_ACKNOWLEDGE); //产生会话，第一个参数是放事物, 第二个参数自动确认
+			session = connection.createSession(Boolean.TRUE, Session.AUTO_ACKNOWLEDGE); //产生会话，第一个参数是放实物, 第二个参数自动确认
 			destination = session.createQueue("firstQueue"); //创建消息队列
 			messageProducer = session.createProducer(destination); //创建消息生产者
 			sendMessage(session, messageProducer); //发送消息
