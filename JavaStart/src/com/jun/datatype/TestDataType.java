@@ -14,8 +14,7 @@ public class TestDataType {
 		
 		char ggg = 'a';//字符，占用存储2个字节，需要用引号
 		String h ="abcsdd"; //字符串，占用存储双引号，序列花字符
-	
-		
+
 	}
 
 }
