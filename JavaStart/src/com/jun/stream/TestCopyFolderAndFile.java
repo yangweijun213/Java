@@ -15,10 +15,16 @@ public class TestCopyFolderAndFile {
 		File[] files = file.listFiles();
 		for (File f : files) {
 			if (f.isDirectory()) {
+				System.out.println("==FileFolder==");
+				System.out.println(f.getName());
+				System.out.println(file2.getName());
+				System.out.println(file.getName());
 				copyDir(f, new File(file2, file.getName()));
 			}
 			if (f.isFile()) {
-				copyFile (f,new File(file2, file.getName()));
+				System.out.println("==File==");
+				System.out.println(f.getName());
+				copyFile (f,new File(new File(file2,file.getName()),f.getName()));
 			}
 		}
 	}
@@ -63,10 +69,10 @@ public class TestCopyFolderAndFile {
 	public static void main(String[] args) {
 
 		// 复制目录, 将stream目录下面的所有目录，复制到D:\test目录下
-		File sourceFile = new File("D:\\workspace\\Java\\JavaStart\\src\\com\\jun\\stream\\a\\1.txt");
-		File tagetFile = new File("D:\\test\\1.txt");
-		//TestCopyFolderAndFile.copyDir(sourceFile, tagetFile);
-		TestCopyFolderAndFile.copyFile(sourceFile, tagetFile);
+		File sourceFile = new File("D:\\workspace\\Java\\JavaStart\\src\\com\\jun\\stream");
+		File tagetFile = new File("D:\\test");
+		TestCopyFolderAndFile.copyDir(sourceFile, tagetFile);
+		//TestCopyFolderAndFile.copyFile(sourceFile, tagetFile);
 	}
 
 }

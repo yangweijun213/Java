@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class TestCopyFile {
+public class TestCopyFileUseFileStream {
 
 	void copyFile(String src, String dec) {
 		FileInputStream fis = null;
@@ -44,7 +44,7 @@ public class TestCopyFile {
 	}
 	
 	public static void main(String[] args) {
-		TestCopyFile testCopyFile = new TestCopyFile();
+		TestCopyFileUseFileStream testCopyFile = new TestCopyFileUseFileStream();
 		
 		String src="D:\\workspace\\Java\\JavaStart\\src\\com\\jun\\stream\\a.txt";
 		String dec="D:\\workspace\\Java\\JavaStart\\src\\com\\jun\\stream\\a_copy.txt";
