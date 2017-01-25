@@ -10,7 +10,7 @@ public class TestFileInputStreams  {
 	
 	//读文件 - read()方法，一个个字节读
 	static void testRead() {	
-		File f = new File ("F:\\yangweijun\\workspace\\Java\\JavaStart\\src\\com\\jun\\stream\\a.txt");
+		File f = new File ("d:\\workspace\\Java\\JavaStart\\src\\com\\jun\\stream\\a.txt");
 		FileInputStream fis = null;
 		
 		try {

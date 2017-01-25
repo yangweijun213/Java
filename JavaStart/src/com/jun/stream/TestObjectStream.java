@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 
 /**
  * @author jeff yang
- * 把对象流写到文件（硬盘）
+ * 序列化 - 把对象流写到文件（硬盘）
  *
  */
 public class TestObjectStream {
