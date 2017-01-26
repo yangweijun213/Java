@@ -1,5 +1,11 @@
 package com.jun.inheritance;
 
+
+/**
+ * @author jeff yang
+ * 如果没有继承话，代码重复率很高 （冗余 ）
+ *
+ */
 public class TestExtend {
 	
 	class Animal {
@@ -28,7 +34,13 @@ public class TestExtend {
 	}
 	
 	class crawler {
-		
+		int age;
+		int weight;
+		int speed;
+		int height;
+		void move() {
+			System.out.println("我在爬行 ");
+		}
 	}
 
 }
