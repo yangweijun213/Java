@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 配置handlerMapper  映射器
+	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>  
+	 配置Controller  自定义控制器
+	<bean name="/he.do" class="cn.sxt.controller.HelloController"/>
+	
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">  
+		 <property name="mappings">  
+			  <props>  
+			  	 key 对应url   value对应 自定义控制器的id
+			   	<prop key="/he.do">helloController</prop>  
+			  </props>  
+		 </property>  
+	</bean>  
+	<bean id="helloController" class="cn.sxt.controller.HelloController"/>
+	-->
+	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"></bean>  
+	<bean class="cn.sxt.controller.HelloController"/>
+	<!-- 配置handerAdapter  适配器 -->
+	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+	<!-- 配置视图渲染器 -->
+	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+	    <!-- 将视图名 渲染后视图的前缀 -->
+	    <property name="prefix" value="/WEB-INF/jsp/"/>
+	    <!-- 渲染后视图的后缀 -->
+	    <property name="suffix" value=".jsp"/>
+	    <!-- 例：视图名为:hello   渲染后：/WEB-INF/jsp/hello.jsp 该页面-->
+	</bean>
+</beans>
