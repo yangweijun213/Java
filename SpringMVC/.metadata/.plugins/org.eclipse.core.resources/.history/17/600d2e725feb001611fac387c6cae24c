@@ -1,0 +1,5 @@
+package cn.sxt.vo.copy;
+
+public class User {
+
+}

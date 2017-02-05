@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sun Feb 05 17:58:16 GMT+08:00 2017
+org.eclipse.jst.jee.server\:/binary\:F\:\\yangweijun\\workspace\\Java\\SpringMVC\\07springmvc_restful\\WebContent\\WEB-INF\\lib\\spring-web-4.1.6.RELEASE.jar=F\:\\yangweijun\\tool\\Development\\3rParty\\apache-tomcat-7.0.73\\wtpwebapps\\07springmvc_restful\\WEB-INF\\lib\\spring-web-4.1.6.RELEASE.jar
+org.eclipse.jst.jee.server\:07springmvc_restful=F\:\\yangweijun\\tool\\Development\\3rParty\\apache-tomcat-7.0.73\\wtpwebapps\\07springmvc_restful
