@@ -19,6 +19,6 @@
 		<!-- 结果视图的后缀 -->
 		<property name="suffix" value=".jsp" />
 	</bean>
-	<!-- 配置请求和处理器 -->
-	<bean name="/hello.do" class="cn.sxt.controller.HelloController" />
+	<!-- 配置请求和处理器。因为这是根据BeanName来映射的，所以需要通过bean name来找，然后，class来处理它。 -->
+	<bean name="/hello.do" class="cn.sxt.controller.HelloController" /> 
 </beans>
