@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd 
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- 扫描该包下的注解 -->
+    <context:component-scan base-package="cn.sxt.controller"/>
+	<!-- 拦截器的配置 -->
+	<mvc:interceptors>
+		<!-- 在 mvc:interceptors中可以配置多个拦截器 多个拦截器按顺序一一执行 -->
+		<mvc:interceptor>
+			<!-- 指明哪些请求需要被拦截 /login.do 表示login.do需要被拦截 /user/add.do 表示/user/add.do请求要被拦截 
+				/* 表示项目路径下的所有请求被拦截 可以拦截： /login.do /add.do /user.do /sys.do等 /**表示项目路径及其子路径下的所有请求被拦截=所有请求被拦截 
+				可以拦截： /login.do /add.do /user.do /sys.do /user/add.do -->
+			<!-- 所有被拦截 -->
+			<mvc:mapping path="/**" />
+			<!-- 对应的拦截器 -->
+			<bean class="cn.sxt.interceptor.LoginInterceptor">
+				<!-- 注入allowedPass -->
+				<property name="allowedPass">
+					<list>
+						<!-- login.do的时候通过它 -->
+						<value>login.do</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+</beans>
