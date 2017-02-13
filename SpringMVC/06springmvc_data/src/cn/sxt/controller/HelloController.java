@@ -18,24 +18,20 @@ import cn.sxt.vo.User;
 
 
 @Controller
+//提交的域名称和方法参数一致 -不需要视图解析器
+//public class HelloController {
+////	public HelloController(){
+////		System.out.println("hello constructor");
+////	}
+//	@RequestMapping("/hello")
+//	public String hello(String name){
+//		System.out.println(name);
+//		return "index.jsp";
+//	}
+//}
 
-//提交数据名称
+//提交的域名称和方法参数不一致
 /*public class HelloController {
-	public HelloController(){
-		System.out.println("hello constructor");
-	}
-	@RequestMapping("/hello")
-	public String hello(String name){
-		System.out.println(name);
-		return "index.jsp";
-	}
-}*/
-
-//提交的域名称
-/*public class HelloController {
-	public HelloController(){
-		System.out.println("hello constructor");
-	}
 	@RequestMapping("/hello")
 //	@RequestParam("uname") uname 是提交的域的名称
 	public String hello(@RequestParam("uname")String name){
@@ -44,17 +40,8 @@ import cn.sxt.vo.User;
 	}
 }*/
 
-//提交对象
+//提交的是对象
 /*public class HelloController {
-	public HelloController(){
-		System.out.println("hello constructor");
-	}
-	@RequestMapping("/hello")
-//	@RequestParam("uname") uname 是提交的域的名称
-	public String hello(@RequestParam("uname")String name){
-		System.out.println(name);
-		return "index.jsp";
-	}
 	@RequestMapping("/user")
 	public String user (User user){
 		System.out.println(user);
@@ -64,11 +51,10 @@ import cn.sxt.vo.User;
 
 //将数据显示UI,通过ModelMap来实现-不需要视图解析器
 public class HelloController {
-public HelloController(){
-	System.out.println("hello constructor");
-}
 @RequestMapping("/hello")
-//@RequestParam("uname") uname 是提交的域的名称
+/*@RequestParam("uname") uname 是提交的域的名称
+ * 
+ */
 public String hello(@RequestParam("uname")String name, ModelMap model){
 	//相当于request.setAttribute("name",name)
 	model.addAttribute("name", name);
