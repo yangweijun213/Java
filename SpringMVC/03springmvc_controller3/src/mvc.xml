@@ -7,7 +7,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-	<!-- 配置视图渲染器 -->
+		<!-- 配置视图渲染器 -->
 	<bean id="jspViewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass"
@@ -17,15 +17,8 @@
 		<!-- 结果视图的后缀 -->
 		<property name="suffix" value=".jsp" />
 	</bean>
-	<!-- 最常用的映射配置方式  -->
-	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="mappings">
-			<props>
-				<!-- key对应url请求名，value对应处理器id -->
-				<prop key="/hello.do">helloController</prop>
-			</props>
-		</property>
-	</bean>
-	<!-- 这里是处理器 -->
+	<!-- 将hello*.do交给helloController处理-->
+	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"></bean>
+	<!-- 请求为hello*.do都将被匹配 -->
 	<bean name="helloController" class="cn.sxt.controller.HelloController"></bean>
 </beans>

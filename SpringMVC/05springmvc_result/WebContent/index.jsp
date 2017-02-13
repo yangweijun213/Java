@@ -22,6 +22,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
 <!--     Servlet API Forward. <br> -->
- ${msg }  index.jsp
+ ${msg }  <br>WebContent/index.jsp
   </body>
 </html>

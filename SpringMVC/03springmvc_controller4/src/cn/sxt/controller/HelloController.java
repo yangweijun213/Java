@@ -20,9 +20,11 @@ public class HelloController {
 			HttpServletResponse resp){
 		ModelAndView mv = new ModelAndView();
 		//封装要显示到视图中的数据
-		mv.addObject("msg", "hello annotation ------"); 
+		mv.addObject("msg", "hello controller configuration"); 
 		//视图名
 		mv.setViewName("hello"); //web-inf/jsp/hello.jsp
 		return mv;
 	}
 }
+
+

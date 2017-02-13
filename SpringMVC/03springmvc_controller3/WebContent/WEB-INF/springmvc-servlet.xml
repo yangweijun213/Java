@@ -7,25 +7,18 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+     <!-- 配置handerMapping -->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+	<!-- 配置handerAdapter 适配器 -->
+	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
 	<!-- 配置视图渲染器 -->
-	<bean id="jspViewResolver"
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="viewClass"
-			value="org.springframework.web.servlet.view.JstlView" />
+	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
 		<!-- 结果视图的前缀 -->
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<!-- 结果视图的后缀 -->
 		<property name="suffix" value=".jsp" />
 	</bean>
-	<!-- 最常用的映射配置方式  -->
-	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="mappings">
-			<props>
-				<!-- key对应url请求名，value对应处理器id -->
-				<prop key="/hello.do">helloController</prop>
-			</props>
-		</property>
-	</bean>
-	<!-- 这里是处理器 -->
-	<bean name="helloController" class="cn.sxt.controller.HelloController"></bean>
+	<!-- 配置请求和处理器 -->
+	<bean name="/hello.do" class="cn.sxt.controller.HelloController" />
 </beans>
