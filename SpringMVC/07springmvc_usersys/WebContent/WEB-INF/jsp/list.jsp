@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -21,7 +22,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-   ${msg } <br>
-   web-inf/hello.jsp
+   <table width="80%" align="center">
+    <tr><td colspan="4" align="right"><a href="toAdd.do">添加</a></td></tr>
+   	<tr>
+   		<td>编号</td>
+   		<td>姓名</td>
+   		<td>年龄</td>
+   		<td>操作</td>
+   	</tr>
+   	<c:forEach items="${list }" var="bean">
+   	<tr>
+   		<td>${bean.id }</td>
+   		<td>${bean.name }</td>
+   		<td>${bean.age }</td>
+   		<td><a href="delete.do?id=${bean.id }">删除</a></td>
+   	</tr>
+   	</c:forEach>
+   </table>
   </body>
 </html>

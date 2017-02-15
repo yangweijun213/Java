@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -21,7 +21,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-   ${msg } <br>
-   web-inf/hello.jsp
+  <form action="add.do" method="post">
+  username:<input type="text" name="u.name"/><br>
+  age:<input type="text" name="age"/><br>
+  name:<input type="text" name="r.name"/><br>
+
+  
+  
+	<input type="submit" value="submit"/>
+  </form>
+  
   </body>
 </html>

@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cn.sxt.vo.User;
@@ -23,7 +24,44 @@ public class UserController {
 	@RequestMapping("/list")
 	public String list(ModelMap map){
 		map.addAttribute("list",list);
-		return "/list.jsp";
+		return "/list.jsp"; //加了/ 跳转到了 /usersys/list.jsp
 		
+	}
+	//添加用户
+	@RequestMapping("/add")
+	public String add(User user){
+		user.setId(list.get(list.size()-1).getId()+1);
+		list.add(user);
+		//return "/user/list.do"
+		//相当于刷新,就不会有过时信息
+		return "redirect:list.do";
+	}
+	
+	//删除用户
+	@RequestMapping("/delete")
+	public String delete(int id){
+		for(int i=0;i<list.size();i++){
+			if(list.get(i).getId()==id){
+				list.remove(i);
+				break;
+			}
+		}
+		//相当于刷新,就不会有过时信息
+		return "redirect:list.do";
+	}
+	
+	//使用restful delete/123
+	//url /user/123/delete1
+	@RequestMapping(value="/{id}/delete1")
+	public String delete1(@PathVariable int id){
+		System.out.println("id===="+id);
+		for(int i=0;i<list.size();i++){
+			if(list.get(i).getId()==id){
+				list.remove(i);
+				break;
+			}
+		}
+		//相当于刷新,就不会有过时信息
+		return "redirect:list.do";
 	}
 }

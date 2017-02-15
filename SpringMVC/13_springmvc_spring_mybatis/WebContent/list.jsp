@@ -24,22 +24,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 	<table width="80%" align="center">
 		<tr>
-			<td colspan="4" align="right"><a href="add.jsp">添加</a></td>
-		</tr>
-		<tr>
 			<td>编号</td>
 			<td>姓名</td>
 			<td>密码</td>
-			<td>操作</td>
 		</tr>
 		<c:forEach items="${list }" var="bean">
 			<tr>
 				<td>${bean.id }</td>
 				<td>${bean.name }</td>
 				<td>${bean.pwd }</td>
-				<td><a href="user/delete.do?id=${bean.id }">删除1</a>
-				<a href="user/${bean.id }/delete1.do">删除2</a>
-				</td>
 			</tr>
 		</c:forEach>
 	</table>
