@@ -20,7 +20,6 @@ public class TestWapperClass {
 		String aa = a.toString();
 		String aa2 = 234+"";
 	    
-	    
 	}
 
 }
