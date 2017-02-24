@@ -1,4 +1,4 @@
-package com.jun.file;
+package com.jun.write;
 
 import java.io.BufferedWriter;
 import java.io.File;
