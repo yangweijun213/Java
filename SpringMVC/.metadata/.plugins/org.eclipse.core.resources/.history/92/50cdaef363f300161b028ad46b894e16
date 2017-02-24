@@ -1,0 +1,12 @@
+package cn.sxt.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import cn.sxt.dao.UserDao;
+import cn.sxt.service.UserService;
+
+@Service("userService")
+public class UserServiceImpl implements UserService {
+	private UserDao userDao;
+
+}

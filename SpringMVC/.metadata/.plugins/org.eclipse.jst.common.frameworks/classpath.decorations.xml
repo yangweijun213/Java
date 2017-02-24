@@ -1,0 +1,16 @@
+<classpath>
+  <container id="02springmvc_hello!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/workspace/Java/SpringMVC/02springmvc_hello/WebContent/WEB-INF/lib/spring-webmvc-4.1.6.RELEASE.jar">
+      <source-attachment-path>D:/tool/Development/3rdPartty/spring/spring-framework-4.3.3.RELEASE-dist/spring-framework-4.3.3.RELEASE/libs/spring-webmvc-4.3.3.RELEASE-sources.jar</source-attachment-path>
+      <attribute name="source_encoding">UTF-8</attribute>
+    </entry>
+  </container>
+  <container id="13_springmvc_spring_mybatis!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/workspace/Java/SpringMVC/13_springmvc_spring_mybatis/WebContent/WEB-INF/lib/spring-web-4.3.3.RELEASE.jar">
+      <source-attachment-path>D:/tool/Development/3rdPartty/spring/spring-framework-4.3.3.RELEASE-dist/spring-framework-4.3.3.RELEASE/libs/spring-web-4.3.3.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+    <entry id="D:/workspace/Java/SpringMVC/13_springmvc_spring_mybatis/WebContent/WEB-INF/lib/spring-jdbc-4.3.3.RELEASE.jar">
+      <source-attachment-path>D:/tool/Development/3rdPartty/spring/spring-framework-4.3.3.RELEASE-dist/spring-framework-4.3.3.RELEASE/libs/spring-jdbc-4.3.3.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

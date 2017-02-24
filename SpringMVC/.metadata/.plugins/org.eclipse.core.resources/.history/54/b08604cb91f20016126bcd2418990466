@@ -1,0 +1,10 @@
+package cn.sxt.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class JsonContoller {
+	
+
+
+}

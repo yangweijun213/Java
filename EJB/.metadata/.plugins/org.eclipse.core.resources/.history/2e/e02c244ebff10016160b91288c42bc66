@@ -1,0 +1,6 @@
+#JNDI\u8FDE\u63A5\u5DE5\u5382
+java.naming.factory.initial=org.jnp.interfaces.NamingContextFactory
+#\u8BBE\u7F6E\u547D\u540D\u670D\u52A1\u5668\u7684\u8FDE\u63A5URL
+java.naming.provider.url=localhost:1099
+#\u5DE5\u5382\u5BF9\u8C61\u7684\u5305
+java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces

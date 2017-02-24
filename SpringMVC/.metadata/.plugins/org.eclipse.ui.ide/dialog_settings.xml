@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\workspace\Java\SpringMVC\03springmvc_controller4"/>
+			<item value="D:\workspace\Java\SpringMVC\03springmvc_controller3"/>
+			<item value="D:\workspace\Java\SpringMVC\03springmvc_controller2"/>
+			<item value="D:\workspace\Java\SpringMVC\03springmvc_controller1"/>
+			<item value="D:\workspace\Java\SpringMVC\02springmvc_annotation"/>
+			<item value="D:\workspace\Java\SpringMVC\01springmvc_hello"/>
+			<item value="D:\workspace\Java\SpringMVC\07springmvc_restful"/>
+			<item value="D:\workspace\Java\SpringMVC\06springmvc_data"/>
+			<item value="D:\workspace\Java\SpringMVC\05springmvc_result"/>
+			<item value="D:\workspace\Java\SpringMVC\03springmvc_annotation"/>
+			<item value="D:\workspace\Java\SpringMVC\02springmvc_hello"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+	<section name="CleanDialogSettings">
+		<item value="500" key="DIALOG_WIDTH"/>
+		<item value="220" key="DIALOG_Y_ORIGIN"/>
+		<item value="390" key="DIALOG_X_ORIGIN"/>
+		<item value="377" key="DIALOG_HEIGHT"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+	</section>
+</section>

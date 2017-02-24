@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;cn.sxt.controller.LoginController&apos; to &apos;UserController&apos;&#x0D;&#x0A;- Original project: &apos;springmvc_interceptor_login&apos;&#x0D;&#x0A;- Original element: &apos;cn.sxt.controller.LoginController&apos;&#x0D;&#x0A;- Renamed element: &apos;cn.sxt.controller.UserController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LoginController&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;cn.sxt.controller{LoginController.java[LoginController" matchStrategy="1" name="UserController" qualified="false" references="true" similarDeclarations="false" stamp="1486624497609" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,9 @@
+package cn.sxt.dao.impl;
+
+import org.mybatis.spring.support.SqlSessionDaoSupport;
+
+import cn.sxt.dao.UserDao;
+
+public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
+
+}

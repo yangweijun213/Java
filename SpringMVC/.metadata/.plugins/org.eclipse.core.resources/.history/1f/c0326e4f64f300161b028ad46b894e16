@@ -1,0 +1,14 @@
+package cn.sxt.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import cn.sxt.service.UserService;
+
+public class UserController {
+	
+	@Autowired
+	private UserService userService;
+	@RequestMapping("/list")
+
+}

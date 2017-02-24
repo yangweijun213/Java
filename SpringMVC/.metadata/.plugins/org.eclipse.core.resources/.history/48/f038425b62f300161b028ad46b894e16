@@ -1,0 +1,8 @@
+package cn.sxt.dao;
+
+import java.util.List;
+
+public interface UserDao {
+	public List<User> list();
+
+}
