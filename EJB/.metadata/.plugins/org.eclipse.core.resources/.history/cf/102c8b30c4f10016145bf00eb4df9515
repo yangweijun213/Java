@@ -1,0 +1,18 @@
+package com.bjsxt.ejb;
+
+import javax.naming.InitialContext;
+
+public class StatefulEjbClient {
+	
+	public static void main (String[] args) throws Exception{
+		
+		//初始化InitialContext， InitialContext对象属于JNDI对象， JNDI是 Jboss服务器提供的一个应用服务 
+		//类似工厂 。 bean Factory
+		InitialContext context = new InitialContext();
+		//得到ejb对象 ， name是ejb名称/访问接口方式
+		StatefulEjb statefulEjb = (StatefulEjb)context.lookup("FirstEjbBean/remote");
+		String s = firstEjb.saySomething("jeff yang");
+		System.out.println(s);
+	}
+
+}

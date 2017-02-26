@@ -1,0 +1,9 @@
+package com.bjsxt.ejb;
+
+public class FirstEjbClient {
+	
+	public static void main (String[] args) throws Exception{
+		
+	}
+
+}

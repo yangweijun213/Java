@@ -1,0 +1,27 @@
+package cn.sxt.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import cn.sxt.vo.User;
+
+@Controller
+@RequestMapping("/user") //窄化-分模块开发，在user下面找list
+public class UserController {
+	private List<User> list = new ArrayList<User>();
+	public UserController(){
+		list.add(new User(1,"aa","1111"));
+		list.add(new User(2,"bb","2222"));
+		list.add(new User(3,"cc","3333"));
+	}
+
+	//查询所有用户
+	@RequestMapping("/list")
+	public String list(ModelMap map){
+		
+	}
+}

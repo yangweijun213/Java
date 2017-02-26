@@ -1,0 +1,6 @@
+package cn.sxt.controller;
+
+@Controller
+public class AjaxController {
+
+}

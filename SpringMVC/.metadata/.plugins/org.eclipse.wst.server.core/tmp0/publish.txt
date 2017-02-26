@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Wed Feb 15 18:20:08 CST 2017
+org.eclipse.jst.jee.server\:/binary\:D\:\\workspace\\Java\\SpringMVC\\13_springmvc_spring_mybatis\\WebContent\\WEB-INF\\lib\\log4j-core-2.0-rc1.jar=D\:\\tool\\Development\\3rdPartty\\apache-tomcat-7.0.73\\wtpwebapps\\13_springmvc_spring_mybatis\\WEB-INF\\lib\\log4j-core-2.0-rc1.jar
+org.eclipse.jst.jee.server\:13_springmvc_spring_mybatis=D\:\\tool\\Development\\3rdPartty\\apache-tomcat-7.0.73\\wtpwebapps\\13_springmvc_spring_mybatis
+org.eclipse.jst.jee.server\:/binary\:D\:\\workspace\\Java\\SpringMVC\\13_springmvc_spring_mybatis\\WebContent\\WEB-INF\\lib\\spring-web-4.3.3.RELEASE.jar=D\:\\tool\\Development\\3rdPartty\\apache-tomcat-7.0.73\\wtpwebapps\\13_springmvc_spring_mybatis\\WEB-INF\\lib\\spring-web-4.3.3.RELEASE.jar

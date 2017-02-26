@@ -1,0 +1,10 @@
+package cn.sxt.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import cn.sxt.service.UserService;
+
+@Service("userService")
+public class UserServiceImpl implements UserService {
+
+}

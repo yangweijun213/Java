@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://www.springframework.org/schema/mvc/spring-mvc.xsd" uri="file:///D:/tool/Development/3rdPartty/spring/spring-framework-4.3.3.RELEASE-dist/spring-framework-4.3.3.RELEASE/schema/mvc/spring-mvc-4.3.xsd"/>
+  <system systemId="http://www.springframework.org/schema/aop/spring-aop.xsd" uri="file:///D:/tool/Development/3rdPartty/spring/spring-framework-4.3.3.RELEASE-dist/spring-framework-4.3.3.RELEASE/schema/aop/spring-aop-4.3.xsd"/>
+  <system systemId="http://www.springframework.org/schema/context/spring-tx.xsd" uri="file:///D:/tool/Development/3rdPartty/spring/spring-framework-4.3.3.RELEASE-dist/spring-framework-4.3.3.RELEASE/schema/tx/spring-tx-4.3.xsd"/>
+  <system systemId="http://www.springframework.org/schema/beans/spring-beans.xsd" uri="file:///D:/tool/Development/3rdPartty/spring/spring-framework-4.3.3.RELEASE-dist/spring-framework-4.3.3.RELEASE/schema/beans/spring-beans-4.3.xsd"/>
+</catalog>
