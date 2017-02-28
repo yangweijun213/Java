@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="04_servlet_lifecircle_doget_dopost_init_service_destroy"
+  id="myeclipse.1488089030965"
+  context-root="/04_servlet"
+  j2ee-spec="5.0"
+  archive="04_servlet_lifecircle_doget_dopost_init_service_destroy.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
