@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="02_servlet_js_css_form"
+  id="myeclipse.1488374905270"
+  context-root="/02"
+  j2ee-spec="5.0"
+  archive="02_servlet_js_css_form.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
