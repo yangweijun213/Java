@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="05_servlet_lifecircle_doget_dopost_init_service_destroy"
+  name="03_myeclipse_deployment"
   id="myeclipse.1488089030965"
-  context-root="/04_servlet"
+  context-root="/03_myeclipse_deployment"
   j2ee-spec="5.0"
-  archive="05_servlet_lifecircle_doget_dopost_init_service_destroy.war">
+  archive="03_myeclipse_deployment.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>
