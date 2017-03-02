@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<servlet>
+		<servlet-name>ServletConfigure</servlet-name>
+		<servlet-class>com.bjsxt.servlet.TestServletConfig</servlet-class>
+		<init-param>
+			<param-name>a</param-name>
+			<param-value>111111</param-value>
+		</init-param>
+		<init-param>
+			<param-name>b</param-name>
+			<param-value>222222</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletConfigure</servlet-name>
+		<url-pattern>/ServletConf</url-pattern>
+	</servlet-mapping>
+</web-app>

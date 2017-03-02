@@ -3,7 +3,7 @@
   type="WEB"
   name="01_servlet_hello"
   id="myeclipse.1488374905270"
-  context-root="/01_servlet_hello"
+  context-root="/01"
   j2ee-spec="5.0"
   archive="01_servlet_hello.war">
   <attributes>

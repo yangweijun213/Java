@@ -1,0 +1,10 @@
+#Thu Mar 02 10:38:12 CST 2017
+eclipse.preferences.version=1
+encoding//src/com/bjsxt/server/DispatchSocket.java=UTF-8
+encoding//src/com/bjsxt/server/Request.java=UTF-8
+encoding//src/com/bjsxt/server/Response.java=UTF-8
+encoding//src/com/bjsxt/server/ServletServer.java=UTF-8
+encoding//src/com/bjsxt/servlet/DeleteServlet.java=UTF-8
+encoding//src/com/bjsxt/servlet/LoginServlet.java=UTF-8
+encoding//src/com/bjsxt/servlet/Servlet.java=UTF-8
+encoding//src/com/bjsxt/servlet/TestServlet.java=UTF-8

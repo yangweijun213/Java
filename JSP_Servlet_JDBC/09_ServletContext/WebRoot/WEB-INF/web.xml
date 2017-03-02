@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	
+	<context-param>
+		<param-name>aa</param-name>
+		<param-value>11112222</param-value>
+	</context-param>
+	
+	<servlet>
+		<servlet-name>ServletConfigure</servlet-name>
+		<servlet-class>com.bjsxt.servlet.TestServletContext</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletContext</servlet-name>
+		<url-pattern>/context</url-pattern>
+	</servlet-mapping>
+</web-app>

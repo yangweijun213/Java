@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="07_servlet_session_cookie"
+  id="myeclipse.1488374905270"
+  context-root="/07"
+  j2ee-spec="5.0"
+  archive="07_servlet_session_cookie.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
