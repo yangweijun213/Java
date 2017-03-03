@@ -19,19 +19,19 @@ public class LoginServlet extends HttpServlet {
 		String pwd = req.getParameter("pwd/").trim();
 
 		 if ("jeff".equals(uname) && "111".equals(pwd)) {
-		 // login success
+		 // 登录成功
 		
-		 // 需要封装数据 User
+		 // éœ€è¦�å°�è£…æ•°æ�® User
 		 User user = new User(uname, pwd);
-		 // 在这个session里面作用域 放入user对象
+		 // åœ¨è¿™ä¸ªsessioné‡Œé�¢ä½œç”¨åŸŸ æ”¾å…¥userå¯¹è±¡
 		 req.getSession().setAttribute("user", user);
 		
-		 // 转发或重定向
+		 // è½¬å�‘æˆ–é‡�å®šå�‘
 		 req.getRequestDispatcher("login_ok.jsp").forward(req, resp);
 		 return;
 		
 		 } else {
-		 // 登录失败
+		 // ç™»å½•å¤±è´¥
 		 req.setAttribute("errormessage", "login error");
 		 req.getRequestDispatcher("loginFailurer").forward(req, resp);
 		 }
