@@ -19,7 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <form name=regForm action="loginSer" method="get">
+    <form name=regForm action="loginSer" method="post">
     username: <input type="text" name=uname/>
     passowd: <input type="text" name=pwd/>
     <input type="submit" value="login"/>

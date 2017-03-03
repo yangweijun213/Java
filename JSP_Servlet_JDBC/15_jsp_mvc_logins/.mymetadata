@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="15_jsp_mvc_login"
-  id="myeclipse.1488527047962"
-  context-root="/15"
+  name="15_jsp_mvc_logins"
+  id="myeclipse.1488535634204"
+  context-root="/15_jsp_mvc_logins"
   j2ee-spec="5.0"
-  archive="15_jsp_mvc_login.war">
+  archive="15_jsp_mvc_logins.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>
