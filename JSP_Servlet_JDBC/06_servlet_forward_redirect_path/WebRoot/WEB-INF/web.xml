@@ -10,7 +10,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>two</servlet-name>
-    <servlet-class>com.bjsxt.servlet.TestForward1</servlet-class>
+    <servlet-class>com.bjsxt.servlet.TestForward</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>two</servlet-name>
