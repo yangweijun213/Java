@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="14_jsp_express_internalobject_action"
+  id="myeclipse.1488374905270"
+  context-root="/14"
+  j2ee-spec="5.0"
+  archive="14_jsp_express_internalobject_action.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
