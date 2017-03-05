@@ -50,7 +50,7 @@ public class demo {
 		this.text = text;
 	}
 
-	//测试中文是
+	//测试中文是的的
 	@Override
 	public String toString() {
 		return "demo [id=" + id + ", name=" + name + ", type=" + type
