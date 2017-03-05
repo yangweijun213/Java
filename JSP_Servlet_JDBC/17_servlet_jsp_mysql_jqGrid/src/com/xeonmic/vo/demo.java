@@ -50,7 +50,7 @@ public class demo {
 		this.text = text;
 	}
 
-	//²âÊÔ²âÊÔ²âÊÔ°¡
+	//²âÊÔ²âÊÔ²âÊÔ°¡µÄµÄ
 	@Override
 	public String toString() {
 		return "demo [id=" + id + ", name=" + name + ", type=" + type
