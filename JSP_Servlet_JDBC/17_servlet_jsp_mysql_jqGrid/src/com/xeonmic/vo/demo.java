@@ -50,7 +50,7 @@ public class demo {
 		this.text = text;
 	}
 
-	//≤‚ ‘
+	//≤‚ ‘≤‚≤‚
 	@Override
 	public String toString() {
 		return "demo [id=" + id + ", name=" + name + ", type=" + type
