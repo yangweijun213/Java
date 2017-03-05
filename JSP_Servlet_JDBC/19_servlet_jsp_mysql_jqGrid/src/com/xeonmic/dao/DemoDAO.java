@@ -4,12 +4,12 @@ import java.util.List;
 import com.xeonmic.vo.demo;
 
 public interface DemoDAO {
-	//添加方法
+	//娣诲姞鏂规硶
 	public boolean doCreate(demo demo);
-	//删除方法
+	//鍒犻櫎鏂规硶
 	public boolean doDelete(int id);
-	//修改方法
+	//淇敼鏂规硶
 	public boolean doChange(demo demo);
-	//查询方法
+	//鏌ヨ鏂规硶
 	public List<demo> doSearch(String keys);
 }

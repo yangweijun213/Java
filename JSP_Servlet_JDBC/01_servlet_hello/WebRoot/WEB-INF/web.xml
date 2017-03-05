@@ -5,7 +5,7 @@
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	<servlet>
 		<servlet-name>one</servlet-name>
-		<servlet-class>com.bjsxt.servlet.SecondServlet</servlet-class>
+		<servlet-class>com.bjsxt.servlet.FirstServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>one</servlet-name>

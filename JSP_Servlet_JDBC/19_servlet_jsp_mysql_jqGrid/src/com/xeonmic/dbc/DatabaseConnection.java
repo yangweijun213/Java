@@ -9,7 +9,7 @@ public class DatabaseConnection {
 	private static final String DBDRIVER="org.gjt.mm.mysql.Driver";
 	private static final String DBURL="jdbc:mysql://localhost:3306/jqgriddemo";
 	private static final String DBUSER="root";
-	private static final String DBPASSWORD="1234";
+	private static final String DBPASSWORD="password";
 	private Connection conn =null;
 	
 	public DatabaseConnection(){
@@ -17,13 +17,13 @@ public class DatabaseConnection {
 			Class.forName(DBDRIVER);
 			this.conn = DriverManager.getConnection(DBURL, DBUSER, DBPASSWORD);
 		} catch (ClassNotFoundException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 			e.printStackTrace();
 		}
-		//System.out.println("Á¬½ÓÊı¾İ¿â³É¹¦");
+		//System.out.println("è¿æ¥æ•°æ®åº“æˆåŠŸ");
 	}
 	
 	public Connection getConnection(){
@@ -35,7 +35,7 @@ public class DatabaseConnection {
 			try {
 				this.conn.close();
 			} catch (SQLException e) {
-				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 				e.printStackTrace();
 			}
 		}

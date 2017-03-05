@@ -40,29 +40,29 @@ public class Demotest {
 	}
 	public static void  doCreate(demo demo) {
 		if (Factory.getDemoDAOInstance().doCreate(demo)) {
-			System.out.println("添加成功");
+			System.out.println("娣诲姞鎴愬姛");
 		}else {
-			System.out.println("添加失败");
+			System.out.println("娣诲姞澶辫触");
 		}
 	}
 	public static void  doChange(demo demo) {
 		if (Factory.getDemoDAOInstance().doChange(demo)) {
-			System.out.println("修改成功");
+			System.out.println("淇敼鎴愬姛");
 		}else {
-			System.out.println("修改失败");
+			System.out.println("淇敼澶辫触");
 		}
 	}
 	public static void  doDelete(int id) {
 		if (Factory.getDemoDAOInstance().doDelete(id)) {
-			System.out.println("删除成功");
+			System.out.println("鍒犻櫎鎴愬姛");
 		}else {
-			System.out.println("删除失败");
+			System.out.println("鍒犻櫎澶辫触");
 		}
 	}
 }
 /*
- * 输出结果
-		添加成功
+ * 杈撳嚭缁撴灉
+		娣诲姞鎴愬姛
 		SELECT id,name,type,pay,text FROM t_demo 
 		demo [id=1, name=Name, type=1, pay=0.98, text=Text]
 		SELECT id,name,type,pay,text FROM t_demo 
@@ -71,10 +71,10 @@ public class Demotest {
 		demo [id=1, name=Name, type=1, pay=0.98, text=Text]
 		SELECT id,name,type,pay,text FROM t_demo 
 		demo [id=1, name=Name, type=1, pay=0.98, text=Text]
-		修改成功
+		淇敼鎴愬姛
 		SELECT id,name,type,pay,text FROM t_demo WHERE id = 1
 		demo [id=1, name=Name, type=1, pay=0.98, text=Change Text]
-		删除成功
+		鍒犻櫎鎴愬姛
 		SELECT id,name,type,pay,text FROM t_demo 
 
  * */

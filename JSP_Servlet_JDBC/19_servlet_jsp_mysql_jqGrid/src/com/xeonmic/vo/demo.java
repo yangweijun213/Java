@@ -50,7 +50,6 @@ public class demo {
 		this.text = text;
 	}
 
-	//的的的是
 	@Override
 	public String toString() {
 		return "demo [id=" + id + ", name=" + name + ", type=" + type

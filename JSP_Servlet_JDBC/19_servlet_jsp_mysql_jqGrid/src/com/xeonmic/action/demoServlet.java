@@ -33,18 +33,18 @@ public class demoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		request.setCharacterEncoding("utf-8");  //ÕâÀï²»ÉèÖÃ±àÂë»áÓĞÂÒÂë
+		request.setCharacterEncoding("utf-8");  //è¿™é‡Œä¸è®¾ç½®ç¼–ç ä¼šæœ‰ä¹±ç 
         response.setContentType("text/html;charset=utf-8");
         response.setHeader("Cache-Control", "no-cache");  
-		int rows = Integer.valueOf(request.getParameter("rows")); //Ã¿Ò³ÖĞÏÔÊ¾µÄ¼ÇÂ¼ĞĞÊı
-		int page = Integer.valueOf(request.getParameter("page")); //µ±Ç°µÄÒ³Âë
-		String sord = request.getParameter("sord");//ÅÅĞò·½Ê½
-		String sidx = request.getParameter("sidx");//ÅÅĞòÁĞÃû
-		Boolean search =(request.getParameter("_search").equals("true"))?true:false;//ÊÇ·ñÓÃÓÚ²éÑ¯ÇëÇó
+		int rows = Integer.valueOf(request.getParameter("rows")); //æ¯é¡µä¸­æ˜¾ç¤ºçš„è®°å½•è¡Œæ•°
+		int page = Integer.valueOf(request.getParameter("page")); //å½“å‰çš„é¡µç 
+		String sord = request.getParameter("sord");//æ’åºæ–¹å¼
+		String sidx = request.getParameter("sidx");//æ’åºåˆ—å
+		Boolean search =(request.getParameter("_search").equals("true"))?true:false;//æ˜¯å¦ç”¨äºæŸ¥è¯¢è¯·æ±‚
 
-		List<demo> allList = new LinkedList<demo>();//·µ»Ø½á¹û¼¯
+		List<demo> allList = new LinkedList<demo>();//è¿”å›ç»“æœé›†
 		
-		String keys="";//²éÑ¯Ìõ¼ş×Ö·û´®
+		String keys="";//æŸ¥è¯¢æ¡ä»¶å­—ç¬¦ä¸²
 		
 		if(search){
 			keys=" WHERE ";
@@ -52,7 +52,7 @@ public class demoServlet extends HttpServlet {
 			System.out.println(filters);
 			//"{"groupOp":"AND","rules":[{"field":"id","op":"eq","data":"1"},{"field":"type","op":"ew","data":"2"}]}"
 			JSONObject jsonObject = JSONObject.fromObject(filters);
-			String groupOp = "AND";//Ã¿¸ö¹æÔòÖ®¼äµÄ¹ØÏµ£¨and/or£©
+			String groupOp = "AND";//æ¯ä¸ªè§„åˆ™ä¹‹é—´çš„å…³ç³»ï¼ˆand/orï¼‰
 			if (jsonObject.getString("groupOp")!=null&&!"".equals(jsonObject.getString("groupOp"))) {
 				if (jsonObject.getString("groupOp").equals("OR")) {
 					groupOp = "OR";
@@ -69,56 +69,56 @@ public class demoServlet extends HttpServlet {
 				String data = rulejson.getString("data");
 				String string = "";
 				switch (op) {
-				case "eq"://ÏàµÈ
+				case "eq"://ç›¸ç­‰
 					string=" = '"+data+"' ";
 					break;
-				case "ne"://²»ÏàµÈ
+				case "ne"://ä¸ç›¸ç­‰
 					string=" <> '"+data+"' ";
 					break;
-				case "li"://Ğ¡ÓÚ
+				case "li"://å°äº
 					string=" < '"+data+"' ";
 					break;
-				case"le"://Ğ¡ÓÚµÈÓÚ
+				case"le"://å°äºç­‰äº
 					string=" <= '"+data+"' ";
 					break;
-				case"gt"://´óÓÚ
+				case"gt"://å¤§äº
 					string=" > '"+data+"' ";
 					break;
-				case "ge"://´óÓÚµÈÓÚ
+				case "ge"://å¤§äºç­‰äº
 					string=" >= '"+data+"' ";
 					break;
-				case "bw"://ÔÚ...Ö®¼ä
+				case "bw"://åœ¨...ä¹‹é—´
 					{
 						if (data.split(",").length==2) {
 							string=" BETWEEN '"+data.split(",")[0]+"' AND '"+data.split(",")[1]+"' ";
 						}else {
-							string=" = '"+data+"' ";//Êı¾İ´íÎóÊ±´¦Àí
+							string=" = '"+data+"' ";//æ•°æ®é”™è¯¯æ—¶å¤„ç†
 						}
 					}	
 					
 					break;
-				case"bn"://²»ÔÚ...Ö®¼ä
+				case"bn"://ä¸åœ¨...ä¹‹é—´
 					{
 						if (data.split(",").length==2) {
 							string=" NOT BETWEEN '"+data.split(",")[0]+"' AND '"+data.split(",")[1]+"' ";
 						}else {
-							string=" <> '"+data+"' ";//Êı¾İ´íÎóÊ±´¦Àí
+							string=" <> '"+data+"' ";//æ•°æ®é”™è¯¯æ—¶å¤„ç†
 						}
 					}
 					break;
-				case"ew"://ÒÔ...½áÊø
+				case"ew"://ä»¥...ç»“æŸ
 					string=" LIKE '%"+data+"' ";
 					break;
-				case "en"://²»ÒÔ...½áÊø
+				case "en"://ä¸ä»¥...ç»“æŸ
 					string=" NOT LIKE '%"+data+"' ";
 					break;
-				case "cn"://°üº¬
+				case "cn"://åŒ…å«
 					string=" LIKE '%"+data+"%' ";
 					break;
-				case "nc"://²»°üº¬
+				case "nc"://ä¸åŒ…å«
 					string=" NOT LIKE '%"+data+"%' ";
 					break;
-				case "in"://ÔÚ
+				case "in"://åœ¨
 					{
 						string=" IN ( ";
 						String[] datas = data.split(",");
@@ -132,7 +132,7 @@ public class demoServlet extends HttpServlet {
 						}
 					}
 					break;
-				case "ni"://²»ÔÚ
+				case "ni"://ä¸åœ¨
 					{
 						string=" NOT IN ( ";
 						String[] datas = data.split(",");
@@ -148,7 +148,7 @@ public class demoServlet extends HttpServlet {
 					break;
 				default:
 					op=null;
-					System.out.println("OP·ûºÅ´íÎó");//OP·ûºÅ´íÎó
+					System.out.println("OPç¬¦å·é”™è¯¯");//OPç¬¦å·é”™è¯¯
 				}
 				if (op!=null) {
 					if (z==rulesjson.size()-1) {
@@ -185,7 +185,7 @@ public class demoServlet extends HttpServlet {
 		
 		
 		
-		//·ÖÒ³²¿·Ö
+		//åˆ†é¡µéƒ¨åˆ†
 		
 		
 		int total=0;	
@@ -201,11 +201,11 @@ public class demoServlet extends HttpServlet {
 		
 //		List<String> colnames = new LinkedList<String>();
 //		colnames.add("");
-//		colnames.add("³ö¿âµ¥ºÅ");
-//		colnames.add("³ö¿âÀàĞÍ");
-//		colnames.add("×Ü½ğ¶î");
-//		colnames.add("ÉêÇëÈË£¨µ¥Î»£©");
-//		colnames.add("±¸×¢");
+//		colnames.add("å‡ºåº“å•å·");
+//		colnames.add("å‡ºåº“ç±»å‹");
+//		colnames.add("æ€»é‡‘é¢");
+//		colnames.add("ç”³è¯·äººï¼ˆå•ä½ï¼‰");
+//		colnames.add("å¤‡æ³¨");
 //		JSONArray colnamesjson = JSONArray.fromObject(colnames);
 		
 		
