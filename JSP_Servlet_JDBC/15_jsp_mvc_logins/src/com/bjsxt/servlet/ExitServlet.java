@@ -13,7 +13,7 @@ public class ExitServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		//session强制无效
+		//session强制无效,重定向到login.jsp
 		req.getSession().invalidate();
 		resp.sendRedirect("login.jsp");
 	}
