@@ -1,5 +1,8 @@
-package com.jun.object;
+package com.jun.对象和内存分析_30_31_32;
 
+/*
+ * 解释对象和类
+ */
 public class TestObject {
 
 	public static void main(String[] args) {

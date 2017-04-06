@@ -1,4 +1,4 @@
-package com.jun.typeconvert_10;
+package com.jun.类型转换_10;
 
 /*
  * 10_尚学堂_高淇_JAVA基础300集最全教程_基本数据类型自动转换_强制转型_类型提升问题

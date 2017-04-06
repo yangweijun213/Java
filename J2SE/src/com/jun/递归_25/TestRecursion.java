@@ -1,35 +1,36 @@
-package com.jun.recursion;
+package com.jun.é€’å½’_25;
 
 import com.jun.container.test;
 
 /**
- * @author jeff yang Ê¹ÓÃµÝ¹éºÍµü´ú£¨Ñ­»·£©ÊµÏÖ µÝ¹éËã·¨
+ * æµ‹è¯•é€’å½’
  *
  */
 public class TestRecursion {
-
+	
+	//æµ‹è¯•é€’å½’ 5*4*3*2*1
 	 long test(long n) {
-		 //µÝ¹éÍ·
 		 if (n==1){
 			 return 1;
 		 }else {
-			 //µÝ¹éÌå
 			 return n*test(n-1);
 		 }
 		 
 	}
 
 	public static void main(String[] args) {
+		
+		//è®¡ç®—é€’å½’çš„æ•ˆçŽ‡
 		long d1=System.currentTimeMillis();
-		System.out.println(new TestRecursion().test(3));
+		System.out.println(new TestRecursion().test(10));
 		long d2=System.currentTimeMillis();
-		System.out.println(d2-d1);
+		System.out.println("é€’å½’çš„æ•ˆçŽ‡ï¼š "+ (d2-d1));
 		
 		
-		//µü´úÊµÏÖµÝ¹é
-		long i=3;
+		long i=10;
 		long result=1;
 		
+		//è®¡ç®—å¾ªçŽ¯çš„æ•ˆçŽ‡
 		long d3=System.currentTimeMillis();
 		while (i>1){
 			result *=i*(i-1);
@@ -37,7 +38,7 @@ public class TestRecursion {
 		}
 		System.out.println(result);
 		long d4=System.currentTimeMillis();
-		System.out.println(d4-d3);
+		System.out.println("å¾ªçŽ¯çš„æ•ˆçŽ‡ï¼š "+(d4-d3));
 	}
 
 }

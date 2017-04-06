@@ -1,4 +1,4 @@
-package com.jun.datatype_07_08_09_12;
+package com.jun.数据类型_07_08_09_12;
 
 public class TestDataType {
 
