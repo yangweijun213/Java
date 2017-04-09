@@ -13,3 +13,4 @@ public @interface SxtField {
 	String type();
 	int length();
 }
+

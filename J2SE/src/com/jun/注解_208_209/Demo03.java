@@ -4,6 +4,8 @@ package com.jun.注解_208_209;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation.ANONYMOUS;
+
 /**
  * 使用反射读取注解的信息，模拟处理注解信息的流程
  * @author 尚学堂高淇
@@ -13,7 +15,7 @@ public class Demo03 {
 	
 	public static void main(String[] args) {
 		try {
-			Class clazz = Class.forName("com.bjsxt.test.annotation.SxtStudent");
+			Class clazz = Class.forName("com.jun.注解_208_209");
 			
 			//获得类的所有有效注解
 			Annotation[] annotations=clazz.getAnnotations();
@@ -34,6 +36,9 @@ public class Demo03 {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 		
 	}
+		
+		
 }
