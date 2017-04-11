@@ -1,12 +1,16 @@
-package com.jun.注解_208_209;
+package com.jun.注解_208_209_210;
+
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(value={ElementType.METHOD,ElementType.TYPE})
+@Target(value={ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface SxtAnnotation02 {
-	String value();
+public @interface SxtField {
+	String columnName();
+	String type();
+	int length();
 }
+
