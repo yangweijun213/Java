@@ -8,5 +8,5 @@ import java.lang.annotation.Target;
 @Target(value={ElementType.METHOD,ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface SxtAnnotation02 {
-	String value();
+	String value(); //如果就一个属性,可以默认使用value
 }

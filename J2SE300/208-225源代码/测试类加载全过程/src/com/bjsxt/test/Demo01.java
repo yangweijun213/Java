@@ -18,8 +18,8 @@ public class Demo01 {
 		
 		//被动引用
 //		System.out.println(A.MAX);
-//		A[] as = new A[10];
-		System.out.println(B.width);
+		A[] as = new A[10];
+//		System.out.println(B.width);
 		
 	}
 }

@@ -19,9 +19,9 @@ public class Demo01 {
 			System.out.println(clazz.hashCode());
 			
 			Class clazz2 = Class.forName(path);	//一个类只对应一个Class对象
-			System.out.println(clazz2.hashCode());
+			System.out.println(clazz2.hashCode()); 
 			
-			Class strClazz = String.class;
+			Class strClazz = String.class; //获取String类的对象
 			Class strClazz2 = path.getClass(); 
 			System.out.println(strClazz==strClazz2);
 			

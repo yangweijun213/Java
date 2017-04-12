@@ -10,10 +10,10 @@ public class Demo02 {
 		System.out.println(ClassLoader.getSystemClassLoader());
 		System.out.println(ClassLoader.getSystemClassLoader().getParent());
 		System.out.println(ClassLoader.getSystemClassLoader().getParent().getParent());   //JAVA_HOME/jre/lib/rt.jar
-		System.out.println(System.getProperty("java.class.path"));
+		System.out.println(System.getProperty("java.class.path")); //独立的，不会影响其它的类
 		
 		System.out.println("################");
-		String a = "gaogao";
+		String a = "gaogao";  //java.lang.string 被引导类加载 了 
 		System.out.println(a.getClass().getClassLoader());
 		System.out.println(a);
 	}

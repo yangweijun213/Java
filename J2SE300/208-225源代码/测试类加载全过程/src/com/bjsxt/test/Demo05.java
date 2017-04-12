@@ -15,7 +15,7 @@ public class Demo05 {
 		ClassLoader loader2 = Thread.currentThread().getContextClassLoader();
 		System.out.println(loader2);
 		
-		Thread.currentThread().setContextClassLoader(new FileSystemClassLoader("d:/myjava/"));
+		Thread.currentThread().setContextClassLoader(new FileSystemClassLoader("d:/myjava/")); //可以指定加载器，改变原来的加载器
 		System.out.println(Thread.currentThread().getContextClassLoader());
 		
 		Class<Demo01> c = (Class<Demo01>) Thread.currentThread().getContextClassLoader().loadClass("com.bjsxt.test.Demo01");
