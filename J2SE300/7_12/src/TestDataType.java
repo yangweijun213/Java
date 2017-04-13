@@ -15,10 +15,10 @@ public class TestDataType {
 		System.out.println(Integer.toHexString(a));
 		
 		int a5 = 10;
-		long a6 = 200;
+		long a6 = 200; 
 		byte b2 = 100;   //如果数据的大小没有超过byte/short/char的表述范围，则可以自动转型。 100正好是8位的二进制
 		
-		long  a7 = 11123213232L;
+		long  a7 = 11123213232L; //必须是L, 因为默认是 正负21亿，是int类型，如果超过了，需要加L 表示long型
 		long l = 3;
 		long l2 = l+3;    //L问题
 		

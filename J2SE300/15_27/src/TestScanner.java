@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class TestScanner {
 	
 	public static void test01(){
-		Scanner s = new Scanner(System.in);
+		Scanner s = new Scanner(System.in); //System 类 ，in　属性
 		String str = s.next();  //程序运行到next会阻塞，等待键盘的输入！
 		System.out.println("刚才键盘输入："+str); 
 	}
