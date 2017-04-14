@@ -5,9 +5,20 @@ public class Animal {
 	public void voice(){
 		System.out.println("普通动物叫声！");
 	}
+	
+	public void attack(){
+		System.out.println("普通动物攻击！");
+	}
+    public Animal() {
+    	System.out.println("Animal 对象生成");
+    }
 }
 
 class Cat extends Animal {
+	
+	public Cat() {
+		System.out.println("Cat 对象生成");
+	}
 	public void voice(){
 		System.out.println("喵喵喵");
 	}
@@ -17,6 +28,10 @@ class Cat extends Animal {
 }
 
 class Dog extends Animal {
+	
+	public Dog() {
+		System.out.println("Dog 对象生成");
+	}
 	public void voice(){
 		System.out.println("汪汪汪");
 	}

@@ -4,7 +4,7 @@ public abstract class Animal {
 	public abstract void run();//抽象方法
 	
 	public void fly() {   //定义自己的方法
-		System.out.println("动物跑");
+		System.out.println("动物飞");
 	}
 
 }

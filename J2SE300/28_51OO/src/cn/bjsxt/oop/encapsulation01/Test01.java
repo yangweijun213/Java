@@ -2,7 +2,7 @@ package cn.bjsxt.oop.encapsulation01;
 
 public class Test01 {
 	private String str;
-	protected void print(){
+	protected void print(){   //同一个包可见
 		String s = str;
 		System.out.println("Test01.print()");
 	}

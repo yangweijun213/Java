@@ -35,7 +35,7 @@ class Mammal extends Animal {
 
 class Bird  extends Animal {
 	public void run(){
-		super.run();   
+		super.run();    //调用Animal 的 run
 		System.out.println("我是一个小小小小鸟，飞呀飞不高");
 	}
 	
@@ -44,7 +44,7 @@ class Bird  extends Animal {
 	}
 	
 	public Bird(){
-		super();
+		super(); //所有构造器的第一句话，总是super(). 如果你没加，编译器会给你加
 		System.out.println("建一个鸟对象");
 	}
 	
