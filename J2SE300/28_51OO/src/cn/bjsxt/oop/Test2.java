@@ -1,4 +1,4 @@
-package cn.bjsxt.oop;
+0package cn.bjsxt.oop;
 
 public class Test2 {
 	public static void main(String[] args) {

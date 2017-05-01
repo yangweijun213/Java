@@ -19,7 +19,7 @@ public class MyException extends Exception {
 }
 
 class TestMyException{
-	void test()throws MyException{
+	void test() throws MyException{
 		///
 	}
 	

@@ -15,7 +15,7 @@ public class TestDateFormat {
 		String str2 = "1977-7-7";
 		DateFormat df2 = new SimpleDateFormat("yyyy-MM-dd");
 		try {
-			Date d2 = df2.parse(str2); 
+			Date d2 = df2.parse(str2); //解析字符串的文本，生成 Date
 			System.out.println(d2); 
 		} catch (ParseException e) {
 			e.printStackTrace();

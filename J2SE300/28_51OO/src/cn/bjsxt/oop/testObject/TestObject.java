@@ -6,8 +6,8 @@ public class TestObject {
 		Object obj2 = new Object();
 		System.out.println(obj.toString());
 		System.out.println(obj2.toString());
-		System.out.println(obj==obj2);
-		System.out.println(obj.equals(obj2)); 
+		System.out.println(obj==obj2); //比较地址
+		System.out.println(obj.equals(obj2)); //比较地址，与==是相同的
 		
 		
 		Mobile m = new Mobile();
