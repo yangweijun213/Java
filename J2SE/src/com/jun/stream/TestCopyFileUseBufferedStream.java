@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * Ê¹ÓÃbufferedStreamÀ´ÊµÏÖ ÎÄ¼ş¸´ÖÆ
+ * ä½¿ç”¨bufferedStreamæ¥å®ç° æ–‡ä»¶å¤åˆ¶
  * 
  * @author jeff yang
  *
@@ -39,7 +39,7 @@ public class TestCopyFileUseBufferedStream {
 			} catch (IOException e) {
 				e.printStackTrace();
 			} finally {
-				// ´¦ÀíÁ÷£¬ºó¿ªµÄÏÈ¹Ø
+				// å¤„ç†æµï¼Œåå¼€çš„å…ˆå…³
 				try {
 					bos.close();
 				} catch (IOException e) {

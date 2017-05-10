@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  * @author jeff yang
- * 使用bufferFileReader, bufferFileWriter实现文本文件复制。提高性能
+ * 浣跨敤bufferFileReader, bufferFileWriter瀹炵幇鏂囨湰鏂囦欢澶嶅埗銆傛彁楂樻�ц兘
  *
  */
 public class TestBufferReaderBufferWriter {

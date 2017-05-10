@@ -9,30 +9,30 @@ import java.io.IOException;
 public class TestFileInputStreams2  {
 	
 
-	//¶ÁÎÄ¼ş - read(byte[)·½·¨£¬¼ÓÁË»º´æ³Ø£¬Ò»Æğ¶ÁÈ¡
+	//è¯»æ–‡ä»¶ - read(byte[)æ–¹æ³•ï¼ŒåŠ äº†ç¼“å­˜æ± ï¼Œä¸€èµ·è¯»å–
 	static void testRead() {	
 		FileInputStream fis = null;
 		
 		try {
-			//Í¨¹ı´ò¿ªÒ»¸öµ½Êµ¼ÊÎÄ¼şµÄÁ¬½ÓÀ´´´½¨Ò»¸ö FileInputStream
+			//é€šè¿‡æ‰“å¼€ä¸€ä¸ªåˆ°å®é™…æ–‡ä»¶çš„è¿æ¥æ¥åˆ›å»ºä¸€ä¸ª FileInputStream
 			fis = new FileInputStream ("D:\\workspace\\Java\\JavaStart\\src\\com\\jun\\stream\\a.txt");
 			
-			//Ò»¸ö¿É±äµÄ×Ö·ûĞòÁĞ, Ğ§ÂÊ¸ß,Èç¹ûÊ¹ÓÃstr+Ğ§ÂÊ±È½ÏµÍ
+			//ä¸€ä¸ªå¯å˜çš„å­—ç¬¦åºåˆ—, æ•ˆç‡é«˜,å¦‚æœä½¿ç”¨str+æ•ˆç‡æ¯”è¾ƒä½
 			StringBuilder sb = new StringBuilder();
 			int temp=0;
-			//×Ö½ÚÊı×é,¶¨Òå»º´æ1k
+			//å­—èŠ‚æ•°ç»„,å®šä¹‰ç¼“å­˜1k
 			byte[] buf =new byte[1024];
 
-			//¶ÁÈëÒ»¸ö byte Êı×é
+			//è¯»å…¥ä¸€ä¸ª byte æ•°ç»„
 			while ((temp=fis.read(buf))!= -1) {
-				//·ÖÅäÒ»¸öĞÂµÄ String,²ÎÊı:×Ö½ÚÊı×é,¿ªÊ¼,×Ö½ÚÊı×é´óĞ¡
+				//åˆ†é…ä¸€ä¸ªæ–°çš„ String,å‚æ•°:å­—èŠ‚æ•°ç»„,å¼€å§‹,å­—èŠ‚æ•°ç»„å¤§å°
 				String str =new String(buf, 0, temp);
-				//Ôö¼Óstring
+				//å¢åŠ string
 				sb.append(str);
 				
 			}
 			
-			//½«¿É±ä×Ö·ûĞòÁĞ×¨³Ì×Ö·û´®´òÓ¡³öÀ´
+			//å°†å¯å˜å­—ç¬¦åºåˆ—ä¸“ç¨‹å­—ç¬¦ä¸²æ‰“å°å‡ºæ¥
 			System.out.println(sb.toString());
 			
 		} catch (FileNotFoundException e) {
@@ -43,7 +43,7 @@ public class TestFileInputStreams2  {
 			e.printStackTrace();
 		}finally {
 			try {
-				//ÓÃÀ´Ö®ºóÒª¹Ø±Õ
+				//ç”¨æ¥ä¹‹åè¦å…³é—­
 				if (fis!=null){
 					fis.close();
 				}
@@ -56,7 +56,7 @@ public class TestFileInputStreams2  {
 	
 	public static void main(String[] args) {
 		
-		//¶ÁÎÄ¼ş
+		//è¯»æ–‡ä»¶
 		testRead();
 		
 	}

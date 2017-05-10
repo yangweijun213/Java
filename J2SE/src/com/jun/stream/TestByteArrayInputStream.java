@@ -15,12 +15,12 @@ public class TestByteArrayInputStream {
 		int num = 0;
 
 		try {
-			// ×ª»»×Ö½ÚÊı×é
+			// è½¬æ¢å­—èŠ‚æ•°ç»„
 			byte[] b = "abcdefghijklmnopqrstuvwxyz".getBytes();
 			bais = new ByteArrayInputStream(b);
 			// bais=new ByteArrayInputStream(b,0,10);
 
-			// Ò»¸öÒ»¸ö×Ö½Ú¶Á
+			// ä¸€ä¸ªä¸€ä¸ªå­—èŠ‚è¯»
 			while ((temp = bais.read()) != -1) {
 				//System.out.println(temp);
 				sb.append((char) temp);
@@ -29,7 +29,7 @@ public class TestByteArrayInputStream {
 			System.out.println(sb);
 		} finally {
 			try {
-				// ÓÃÀ´Ö®ºóÒª¹Ø±Õ
+				// ç”¨æ¥ä¹‹åè¦å…³é—­
 				if (bais != null) {
 					bais.close();
 				}
@@ -42,7 +42,7 @@ public class TestByteArrayInputStream {
 
 	public static void main(String[] args) {
 
-		// ¶ÁÎÄ¼ş
+		// è¯»æ–‡ä»¶
 		testRead();
 
 	}

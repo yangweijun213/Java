@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 
 /**
  * @author jeff yang
- * ·´ĞòÁĞ»¯ - ´ÓÎÄ¼ş¶Á³ö¶ÔÏó
+ * ååºåˆ—åŒ– - ä»æ–‡ä»¶è¯»å‡ºå¯¹è±¡
  *
  */
 public class TestObjectStream2 {
@@ -18,7 +18,7 @@ public static void main(String[] args) throws IOException, ClassNotFoundExceptio
 		FileInputStream fis = null;
 		ObjectInputStream ois= null;
 		
-		//·´ĞòÁĞ»¯ £¨¶Á £©
+		//ååºåˆ—åŒ– ï¼ˆè¯» ï¼‰
 		fis = new FileInputStream("d:/ccc.txt");
 		ois= new ObjectInputStream(fis);
 		

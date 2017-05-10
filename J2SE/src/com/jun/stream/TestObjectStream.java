@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 
 /**
  * @author jeff yang
- * ĞòÁĞ»¯ - °Ñ¶ÔÏóÁ÷Ğ´µ½ÎÄ¼ş£¨Ó²ÅÌ£©
+ * åºåˆ—åŒ– - æŠŠå¯¹è±¡æµå†™åˆ°æ–‡ä»¶ï¼ˆç¡¬ç›˜ï¼‰
  *
  */
 public class TestObjectStream {
@@ -18,16 +18,16 @@ public class TestObjectStream {
 		
 		Person person = new Person(20, true, "aa");
 		Person person2 = new Person(30, true, "addddda");
-		//°ÑÁ÷µÄÊı¾İĞ´µ½ÎÄ¼şÀï
+		//æŠŠæµçš„æ•°æ®å†™åˆ°æ–‡ä»¶é‡Œ
 		FileOutputStream fos = null;
 		ObjectOutputStream oos= null;
 		
-		//ĞòÁĞ»¯ £¨Ğ´ £©
+		//åºåˆ—åŒ– ï¼ˆå†™ ï¼‰
 		fos = new FileOutputStream("d:/ccc.txt");
-		//´«fos
+		//ä¼ fos
 		oos= new ObjectOutputStream(fos);
 		
-		//Ğ´
+		//å†™
 		oos.writeObject(person);
 		oos.writeObject(person2);
 		oos.flush();

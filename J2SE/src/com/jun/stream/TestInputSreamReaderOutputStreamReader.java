@@ -7,14 +7,14 @@ import java.io.InputStreamReader;
 public class TestInputSreamReaderOutputStreamReader {
 	
 	public static void main(String[] args) {
-		//½ÓÊÜÓÃ»§µÄÊäÈë
+		//æ¥å—ç”¨æˆ·çš„è¾“å…¥
 		BufferedReader bReader =null;
 		
 		try {
-			System.out.println("Ãû×Ö£º " );
-			//¡°±ê×¼¡±ÊäÈëÁ÷¡£
+			System.out.println("åå­—ï¼š " );
+			//â€œæ ‡å‡†â€è¾“å…¥æµã€‚
 			bReader=new BufferedReader(new InputStreamReader(System.in));
-			System.out.println("ÓÃ»§ÊäÈë£º "+bReader.readLine());
+			System.out.println("ç”¨æˆ·è¾“å…¥ï¼š "+bReader.readLine());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

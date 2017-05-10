@@ -10,7 +10,7 @@ public class TestCopyFolderAndFile {
 
 	static void copyDir(File file, File file2) {
 
-		// Èç¹ûÄ¿±êÄ¿Â¼Ã»ÓĞ£¬¾ÍĞÂ½¨Ò»¸öÄ¿Â¼
+		// å¦‚æœç›®æ ‡ç›®å½•æ²¡æœ‰ï¼Œå°±æ–°å»ºä¸€ä¸ªç›®å½•
 		new File(file2, file.getName()).mkdir();
 		File[] files = file.listFiles();
 		for (File f : files) {
@@ -68,7 +68,7 @@ public class TestCopyFolderAndFile {
 
 	public static void main(String[] args) {
 
-		// ¸´ÖÆÄ¿Â¼, ½«streamÄ¿Â¼ÏÂÃæµÄËùÓĞÄ¿Â¼£¬¸´ÖÆµ½D:\testÄ¿Â¼ÏÂ
+		// å¤åˆ¶ç›®å½•, å°†streamç›®å½•ä¸‹é¢çš„æ‰€æœ‰ç›®å½•ï¼Œå¤åˆ¶åˆ°D:\testç›®å½•ä¸‹
 		File sourceFile = new File("D:\\workspace\\Java\\JavaStart\\src\\com\\jun\\stream");
 		File tagetFile = new File("D:\\test");
 		TestCopyFolderAndFile.copyDir(sourceFile, tagetFile);

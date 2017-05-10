@@ -8,7 +8,7 @@ import java.io.IOException;
 
 /**
  * @author jeff yang
- * 使用 FileReader和FileWriter实现文件复制
+ * 浣跨敤 FileReader鍜孎ileWriter瀹炵幇鏂囦欢澶嶅埗
  *
  */
 public class TestFileReadeFileWriter {

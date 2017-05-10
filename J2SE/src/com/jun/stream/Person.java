@@ -2,12 +2,12 @@ package com.jun.stream;
 
 import java.io.Serializable;
 
-//½«Õâ¸ö¶ÔÏó´æµ½Ó²ÅÌÉÏ 
+//å°†è¿™ä¸ªå¯¹è±¡å­˜åˆ°ç¡¬ç›˜ä¸Š 
 public class Person implements Serializable{
 	int age;
 	boolean isMan;
 	
-	//transientĞŞÊÎ»¯£¬Õâ¸öÊôĞÔ²»»á±»ĞòÁĞ»¯ 
+	//transientä¿®é¥°åŒ–ï¼Œè¿™ä¸ªå±æ€§ä¸ä¼šè¢«åºåˆ—åŒ– 
 	transient String name;
 	public Person (int age, boolean isMan, String name) {
 		super();

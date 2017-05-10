@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class TestByteArrayOutputStream {
 
-	// ½«Á÷µÄÄÚÈİĞ´µ½Êı×éÖĞ(ÓÃµÄ²»¶à)
+	// å°†æµçš„å†…å®¹å†™åˆ°æ•°ç»„ä¸­(ç”¨çš„ä¸å¤š)
 	static byte[] getBytesFromIS(FileInputStream fis) {
 
 		ByteArrayOutputStream baos = null;
@@ -20,11 +20,11 @@ public class TestByteArrayOutputStream {
 		try {
 			baos = new ByteArrayOutputStream();
 
-			// Ò»¸öÒ»¸ö×Ö½Ú¶Á
+			// ä¸€ä¸ªä¸€ä¸ªå­—èŠ‚è¯»
 			while ((temp = fis.read()) != -1) {
 				baos.write(temp);
 			}
-			// ½«
+			// å°†
 			return baos.toByteArray();
 			
 		} catch (IOException e) {
@@ -44,7 +44,7 @@ public class TestByteArrayOutputStream {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// ¶ÁÎÄ¼ş
+		// è¯»æ–‡ä»¶
 		byte[] output = getBytesFromIS(fis);
 		System.out.println((char)output[1]);
 

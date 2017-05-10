@@ -7,29 +7,29 @@ import sun.applet.Main;
 
 public class FileOutputStreams {
 
-	// Ğ´ÎÄ¼ş
+	// å†™æ–‡ä»¶
 	static void testWrite() {
 				
 		FileOutputStream fos = null;
 				String str = "abcdefdfddfdfdf";
 				try {
-					//×·¼Ó
+					//è¿½åŠ 
 					//fos = new FileOutputStream ("F:\\yangweijun\\workspace\\Java\\JavaStart\\src\\com\\jun\\stream\\a.txt",true);
 					
-					//ÖØĞ´
+					//é‡å†™
 					//fos = new FileOutputStream ("F:\\yangweijun\\workspace\\Java\\JavaStart\\src\\com\\jun\\stream\\a.txt",false);
 					
 					fos = new FileOutputStream ("D:\\yangweijun\\workspace\\Java\\JavaStart\\src\\com\\jun\\stream\\a.txt");
 					//fos.write('c');
 					
-					//·½·¨1¡£´Ó×Ö·û´®¶ÁÈ¡×Ö½Ú£¨charAt£©
+					//æ–¹æ³•1ã€‚ä»å­—ç¬¦ä¸²è¯»å–å­—èŠ‚ï¼ˆcharAtï¼‰
 //					for (int i=0; i<str.length();i++){
 //						fos.write(str.charAt(i));
 //					}
 					
-					//½«Á÷ÖĞÊı¾İ³åË¢µ½Êı¾İÔ´,µ«ÊÇÓÉÓÚµ÷ÁËclose(),ËùÒÔµ÷²»µ÷ÎŞËùÎ½
+					//å°†æµä¸­æ•°æ®å†²åˆ·åˆ°æ•°æ®æº,ä½†æ˜¯ç”±äºè°ƒäº†close(),æ‰€ä»¥è°ƒä¸è°ƒæ— æ‰€è°“
 					//fos.flush();
-					//·½·¨2¡£½«Ö¸¶¨µÄ×Ö½ÚĞ´ÈëÎÄ¼şÊä³öÁ÷£¬½«×Ö·û´®×ª»»×Ö½ÚÊı×é
+					//æ–¹æ³•2ã€‚å°†æŒ‡å®šçš„å­—èŠ‚å†™å…¥æ–‡ä»¶è¾“å‡ºæµï¼Œå°†å­—ç¬¦ä¸²è½¬æ¢å­—èŠ‚æ•°ç»„
 					fos.write(str.getBytes());
 					
 				} catch (FileNotFoundException e) {
@@ -53,7 +53,7 @@ public class FileOutputStreams {
 	
 	public static void main(String[] args) {
 		
-		//¶ÁÎÄ¼ş
+		//è¯»æ–‡ä»¶
 		//testRead();
 		testWrite();
 		

@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class TestFileInputStreams  {
 	
-	//¶ÁÎÄ¼ş - read()·½·¨£¬Ò»¸ö¸ö×Ö½Ú¶Á
+	//è¯»æ–‡ä»¶ - read()æ–¹æ³•ï¼Œä¸€ä¸ªä¸ªå­—èŠ‚è¯»
 	static void testRead() {	
 		File f = new File ("d:\\workspace\\Java\\JavaStart\\src\\com\\jun\\stream\\a.txt");
 		FileInputStream fis = null;
@@ -16,9 +16,9 @@ public class TestFileInputStreams  {
 		try {
 			fis = new FileInputStream (f);
 			int i ;
-			//´Ó´ËÊäÈëÁ÷ÖĞ¶ÁÈ¡Ò»¸öÊı¾İ×Ö½Ú
+			//ä»æ­¤è¾“å…¥æµä¸­è¯»å–ä¸€ä¸ªæ•°æ®å­—èŠ‚
 			while ((i=fis.read())!= -1) {
-				//Ç¿×ª£ºint×ª»»char
+				//å¼ºè½¬ï¼šintè½¬æ¢char
 				char a = (char)i;
 				System.out.print(a);
 			}
@@ -30,7 +30,7 @@ public class TestFileInputStreams  {
 			e.printStackTrace();
 		}finally {
 			try {
-				//ÓÃÀ´Ö®ºóÒª¹Ø±Õ
+				//ç”¨æ¥ä¹‹åè¦å…³é—­
 				if (fis!=null){
 					fis.close();
 				}
@@ -46,7 +46,7 @@ public class TestFileInputStreams  {
 	
 	public static void main(String[] args) {
 		
-		//¶ÁÎÄ¼ş
+		//è¯»æ–‡ä»¶
 		testRead();
 	
 		
