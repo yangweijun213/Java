@@ -1,9 +1,9 @@
 package com.jun.排序;
 
-public class HeBinPaiXu {
+public class GuiBinPaiXu {
 
 	public static void main(String[] args) {
-		int[] list = { 5, 6, 7, 4, 3, 2, 1 };
+		int[] list = { 8,7,6,5 };
 		funMergeSort(list);
 
 		for (int i = 0; i < list.length; i++) {
