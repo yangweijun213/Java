@@ -11,7 +11,7 @@ public class ZhiJieChaRu2 {
 	// 直接插入排序 - 从大到小
 	static void funDInsertSort(int[] array) {
 
-		for (int i = 0; i < array.length; i++) {
+		for (int i = 1; i < array.length; i++) {
 			// 后者元素
 			int temp = array[i];
 			// 前者元素
@@ -25,8 +25,5 @@ public class ZhiJieChaRu2 {
 			array[j + 1] = temp;
 		}
 
-		for (int i = 0; i < array.length; i++) {
-			System.out.println(array[i]);
-		}
 	}
 }

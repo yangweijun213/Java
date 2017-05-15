@@ -1,10 +1,12 @@
 package com.jun.排序;
 
+import java.util.Arrays;
+
 public class MaoPao {
 
 	public static void main(String[] args) {
-		int[] list = { 7, 6, 5, 4, 3, 2, 1 };
-		int[] list2 = { 1, 2, 3, 4, 5, 6, 7 };
+		int[] list = { 6,5,4,3,2,1 };
+		int[] list2 = { 1,2,3,4,5,6};
 		funBubbleSort(list2);
 	}
 
@@ -15,26 +17,18 @@ public class MaoPao {
 	static void funBubbleSort(int[] array) {
 
 		boolean flag = true;
-		int interation =0;
-	
+		System.out.println(Arrays.toString(array));
 		for (int i = 0; i < array.length - 1 && flag; i++) {
-			flag = false;
-			interation = interation+1;
-			System.out.println("interation:"+interation);
-			
+			//flag = false;			
 			for (int j = 0; j < array.length - 1 - i; j++) {
-				interation = interation+1;
-				System.out.println("interation:"+interation);
 				if (array[j] > array[j + 1]) {
 					int temp = array[j];
 					array[j] = array[j + 1];
 					array[j + 1] = temp;
-					flag = true;
+					//flag = true;
+					System.out.println(Arrays.toString(array));
 				}
 			}
-		}
-		for (int i = 0; i < array.length; i++) {
-			System.out.println(array[i]);
 		}
 	}
 

@@ -1,9 +1,9 @@
 package com.jun.排序;
 
-public class xuanzepaixu2 {
+public class ZhiJieXuanZe2 {
 	
 	public static void main(String[] args) {
-		int[] list = {1,2,3,4,5,6,7};
+		int[] list = {1,2,3,4};
 		SelectionSort(list);
 	}
 	
