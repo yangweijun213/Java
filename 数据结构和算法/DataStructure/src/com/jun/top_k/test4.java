@@ -1,17 +1,28 @@
-package com.jun.排序;
+package com.jun.top_k;
 
 import java.util.Arrays;
 
-//参考：http://www.cnblogs.com/en-heng/p/6336625.html
-public class KuaiSuPaiXu {
-
+public class test4 {
 	public static void main(String[] args) {
-		int[] list = { 4, 1, 2, 5, 6,7,3 };
-		//排序之前
-		System.out.println(Arrays.toString(list));
-		quickSort(list, 0, list.length - 1);
-		//排序之后
-		System.out.println(Arrays.toString(list));
+		int[] list = { 4, 1, 2, 5, 6, 7 };
+		int k = 3;
+
+		// Top K-largest - 方法1.快排,最大的3个
+		int[] arr = findKLargest(list, k);
+		System.out.println("Top K-largest - 方法1.快排,最大的3个: " + Arrays.toString(arr));
+	}
+
+	// Top K-Largest - 方法1.快排,最大的3个
+	public static int[] findKLargest(int[] array, int k) {
+		int left = 0;
+		int right = array.length - 1;
+		int[] list = new int[3];
+		quickSort(array, left, right);
+		System.out.println("快排之后: " + Arrays.toString(array));
+		for (int i = 0; i < k; i++) {
+			list[i] = array[i];
+		}
+		return list;
 	}
 
 	// 快速排序(快排)
@@ -26,6 +37,7 @@ public class KuaiSuPaiXu {
 	// partition subarray a[left..right] so that a[left..j-1] >= a[j] >=
 	// a[j+1..right]
 	// and return index j
+	// 从大到小
 	private static int partition(int arr[], int left, int right) {
 		int i = left, j = right + 1, pivot = arr[left];
 		while (true) {
@@ -38,10 +50,8 @@ public class KuaiSuPaiXu {
 			if (i >= j)
 				break;
 			swap(arr, i, j);
-			System.out.println(Arrays.toString(arr));
 		}
 		swap(arr, left, j); // swap pivot and a[j]
-		System.out.println(Arrays.toString(arr));
 		return j;
 	}
 
@@ -50,5 +60,4 @@ public class KuaiSuPaiXu {
 		arr[i] = arr[j];
 		arr[j] = tmp;
 	}
-
 }

@@ -3,18 +3,18 @@ package com.jun.查找;
 public class ErFenChaoZhao {
 
 	public static void main(String[] args) {
-
+		//二分查找使用之前:数列必须是一个有序的
 		int[] list = { 1, 2, 3, 4, 5, 6 };
-		System.out.println(funBinSearch(list, 5));
+		//数字5的index
+		int searchKey = 5;
+		System.out.println("数字5的index: "+funBinSearch(list, searchKey));
 	}
 
-	// 使用二分查找 - 提前是一个升序的线性表->折半->左比或右比
-	// 最快是O(1), 最慢是(log2^n)
+	// 二分查找
+	// 最好O(1), 最坏(log2^n)
 	static int funBinSearch(int[] list, int data) {
-
 		int low = 0;
 		int high = list.length - 1;
-
 		while (low <= high) {
 
 			// 当值位置
@@ -27,7 +27,6 @@ public class ErFenChaoZhao {
 			} else {
 				low = med + 1;
 			}
-
 		}
 		return -1;
 	}
