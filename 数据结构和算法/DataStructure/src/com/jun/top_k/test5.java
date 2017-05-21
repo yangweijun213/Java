@@ -5,18 +5,19 @@ import java.util.Arrays;
 public class test5 {
 	public static void main(String[] args) {
 		int[] list = { 4, 1, 2, 5, 6, 7 };
-		int[] list2 = { 4, 1, 2, 5, 6, 7,9,11,13,15,17,22 };
+		int[] list2 = { 16, 1, 2, 5, 6, 7,9,11,13,15,17,22 };
 		
-		int k = 3;
+		int k = 5;
 		// 找出Top K-largest - 方法2. 快选,最大的3个 (这3个没有排序)
 		int kth = findKLargest(list2, k);
 		System.out.println("k元素: "+kth);
-		for (int i = 0; i <= kth; i++) {
+		for (int i = 0; i <=kth; i++) {
 			System.out.println("方法2. 快选,最大的3个" + list2[i]);
 		}
 	}
 
 	// 方法2.快选 - 找出Top K Largest
+	// 参考: http://www.cnblogs.com/en-heng/p/6336625.html
 	public static int findKLargest(int[] array, int k) {
 		return quickSelect(array, k, 0, array.length - 1);
 	}
@@ -31,7 +32,7 @@ public class test5 {
 		else if (index - left + 1 == k)// 主元素的位置和K元素的位置相同。
 			return index;
 		else
-			return quickSelect(arr, k - index + left - 1, index + 1, right); //第k大元素必出现在右子数组中
+			return quickSelect(arr, k - index + left - 1, index + 1, right); //第k大元素必出现在右子数组中 (位置上相减)
 	}
 
 	// partition subarray a[left..right] so that a[left..j-1] >= a[j] >=

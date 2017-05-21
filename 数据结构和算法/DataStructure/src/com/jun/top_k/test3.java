@@ -15,6 +15,7 @@ public class test3 {
 	
 	// 解决TOP K -快速选择 - 找出Kth
 	// 参考: http://www.cnblogs.com/en-heng/p/6336625.html
+	// 平均：O(nlog2^n) 最好：O(nlog2^n) 最坏：O(n^2) http://www.jianshu.com/p/42f81846c0fb
 	public static int findKthLargest(int[] nums, int k) {
 		return quickSelect(nums, k, 0, nums.length - 1);
 	}
