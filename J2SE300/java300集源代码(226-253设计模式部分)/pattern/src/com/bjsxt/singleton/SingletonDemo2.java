@@ -13,7 +13,7 @@ public class SingletonDemo2 {
 	private SingletonDemo2(){ //私有化构造器
 	}
 	
-	//方法同步，调用效率低！
+	//方法同步，调用效率低！如果不加synchronized,避免在并发高时候,出现多个对象.
 	public static  synchronized SingletonDemo2  getInstance(){
 		if(instance==null){
 			instance = new SingletonDemo2();
